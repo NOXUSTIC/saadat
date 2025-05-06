@@ -44,13 +44,13 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section bg-secondary/50">
+    <section id="skills" className="section bg-muted">
       <h2 className="section-title">My Skills</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((category, index) => (
-          <Card key={index} className="overflow-hidden border-border hover:border-purple-400 transition-colors">
-            <div className="h-2 bg-gradient-to-r from-purple-400 to-purple-600"></div>
+          <Card key={index} className="overflow-hidden border-border hover:border-ocean transition-colors">
+            <div className="h-2 bg-gradient-to-r from-ocean to-ocean-light"></div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-4">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
@@ -58,7 +58,7 @@ const Skills = () => {
                   <Badge 
                     key={skillIndex}
                     variant="outline" 
-                    className="bg-background hover:bg-purple-100 hover:text-purple-700 transition-colors"
+                    className="bg-background hover:bg-ocean hover:text-white transition-colors"
                   >
                     {skill}
                   </Badge>
