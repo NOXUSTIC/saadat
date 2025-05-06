@@ -7,11 +7,23 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
-      skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind CSS", "Responsive Design"]
+      skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vite", "Tailwind CSS", "Responsive Design"]
     },
     {
       title: "Backend Development",
       skills: ["Node.js", "Express", "RESTful APIs", "Database Design"]
+    },
+    {
+      title: "Embedded Systems",
+      skills: ["Raspberry Pi", "ATmega Microcontrollers", "ARM Chipsets", "IoT Development", "Firmware Programming"]
+    },
+    {
+      title: "3D Modeling & Design",
+      skills: ["Fusion360", "SolidWorks", "Blender", "CAD Design", "3D Printing"]
+    },
+    {
+      title: "PCB Design",
+      skills: ["EasyEDA", "KiCad", "Circuit Design", "Component Selection", "Hardware Prototyping"]
     },
     {
       title: "Database Technologies",
@@ -56,8 +68,9 @@ const Skills = () => {
       <div className="mt-16 max-w-3xl mx-auto text-center">
         <h3 className="text-2xl font-bold mb-4">My Development Philosophy</h3>
         <p className="text-lg">
-          I believe in writing clean, maintainable code and prioritizing user experience in every project.
-          I'm committed to continuous learning and staying updated with the latest technologies and best practices.
+          I believe in creating solutions that bridge hardware and software, combining my expertise in fullstack development,
+          embedded systems, and design to build innovative products and experiences. I'm passionate about the complete
+          product development lifecycle from concept to implementation.
         </p>
       </div>
     </section>

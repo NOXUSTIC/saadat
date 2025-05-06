@@ -13,7 +13,7 @@ const Hero = () => {
       
       <div className="container px-4 sm:px-6 flex flex-col items-center text-center">
         <span className="inline-block py-1 px-3 mb-4 bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 text-sm font-medium rounded-full animate-fade-in">
-          Full-Stack Developer
+          Fullstack & Embedded Systems Engineer
         </span>
         
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight animate-fade-up">
@@ -21,8 +21,8 @@ const Hero = () => {
         </h1>
         
         <p className="max-w-2xl text-xl text-foreground/80 mb-8 md:mb-10 animate-fade-up" style={{animationDelay: "0.2s"}}>
-          Passionate developer building innovative solutions and 
-          creating impactful web experiences with modern technologies.
+          Creating innovative solutions at the intersection of software, hardware, and design.
+          Building impactful experiences with modern web technologies and embedded systems.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{animationDelay: "0.3s"}}>

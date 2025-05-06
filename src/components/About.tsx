@@ -10,20 +10,21 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
         <div className="space-y-6">
           <p className="text-lg">
-            Hello! I'm Saadat S. Rahman, a passionate developer with a love for creating
-            innovative solutions and elegant user experiences. I enjoy tackling complex problems
-            and turning them into simple, beautiful, and intuitive designs.
+            Hello! I'm Saadat S. Rahman, a versatile developer with expertise spanning fullstack development,
+            embedded systems engineering, 3D modeling, and PCB design. I thrive on projects that challenge me
+            to integrate hardware and software solutions to solve complex problems.
           </p>
           
           <p className="text-lg">
-            My journey in technology began with a curiosity about how things work, which led me to
-            explore various programming languages and frameworks. I'm continuously learning and adapting 
-            to new technologies to improve my skills and deliver better results.
+            My journey began with a passion for understanding how things work at both the software and hardware level.
+            This curiosity led me to explore various technologies across different domains, from web development with React
+            and Tailwind CSS to designing circuit boards in KiCad and creating 3D models in Fusion360.
           </p>
           
           <p className="text-lg">
-            When I'm not coding, you might find me exploring new technologies, contributing to open-source
-            projects, or participating in hackathons and coding challenges to keep my skills sharp.
+            I enjoy the entire development process—from initial concept design and prototyping to final implementation
+            and deployment. Whether it's creating an intuitive web application, programming microcontrollers, or designing
+            functional 3D models, I'm committed to delivering high-quality solutions that meet real-world needs.
           </p>
         </div>
         
@@ -37,8 +38,8 @@ const About = () => {
                 My Mission
               </h3>
               <p>
-                To create impactful digital solutions that solve real-world problems and provide 
-                exceptional user experiences, while continuously growing as a developer.
+                To create innovative solutions that seamlessly integrate hardware and software, pushing the boundaries
+                of what's possible and delivering products that make a meaningful impact.
               </p>
             </CardContent>
           </Card>
@@ -52,9 +53,9 @@ const About = () => {
                 My Approach
               </h3>
               <p>
-                I believe in writing clean, maintainable code and creating applications that are not
-                only functional but also intuitive and accessible. I value collaboration and continuous
-                learning in my development process.
+                I take a holistic approach to development, considering both technical requirements and user needs.
+                Whether working on embedded systems or web applications, I focus on creating solutions that are
+                efficient, maintainable, and user-friendly.
               </p>
             </CardContent>
           </Card>
@@ -65,12 +66,12 @@ const About = () => {
                 <svg className="w-6 h-6 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                 </svg>
-                Education
+                Continuous Learning
               </h3>
               <p>
-                I'm continuously expanding my knowledge through self-learning, online courses, 
-                and practical project experience. I stay up-to-date with the latest technologies
-                and industry best practices.
+                Technology evolves rapidly, and I'm committed to growing with it. I continuously expand my knowledge
+                through hands-on projects, online courses, and community collaboration, ensuring I stay at the
+                forefront of both software and hardware development.
               </p>
             </CardContent>
           </Card>
