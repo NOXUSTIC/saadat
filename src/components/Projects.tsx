@@ -58,11 +58,15 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section">
-      <h2 className="section-title">My Projects</h2>
+      <h2 className="section-title animate-fade-in">My Projects</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {projects.map((project, index) => (
-          <Card key={index} className="overflow-hidden border-border hover:shadow-lg transition-all flex flex-col">
+          <Card 
+            key={index} 
+            className="overflow-hidden border-border hover:shadow-lg transition-all flex flex-col animate-fade-up"
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
             <div className="h-48 overflow-hidden">
               <img 
                 src={project.imageSrc} 
@@ -80,7 +84,7 @@ const Projects = () => {
                   <Badge 
                     key={tagIndex}
                     variant="outline" 
-                    className="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300"
+                    className="text-xs px-2 py-1 bg-ocean/10 text-ocean-light"
                   >
                     {tag}
                   </Badge>
@@ -96,7 +100,7 @@ const Projects = () => {
                   Code
                 </a>
               </Button>
-              <Button size="sm" className="bg-purple-600 hover:bg-purple-700" asChild>
+              <Button size="sm" className="bg-ocean hover:bg-ocean-light" asChild>
                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -109,9 +113,9 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="mt-16 text-center">
+      <div className="mt-16 text-center animate-fade-up" style={{animationDelay: "0.6s"}}>
         <p className="text-lg mb-4">Interested in seeing more of my work?</p>
-        <Button className="bg-purple-600 hover:bg-purple-700" asChild>
+        <Button className="bg-ocean hover:bg-ocean-light" asChild>
           <a href="https://github.com/NOXUSTIC" target="_blank" rel="noopener noreferrer">
             View More on GitHub
           </a>

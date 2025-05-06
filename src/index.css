@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -56,7 +57,7 @@
     --popover: 240 10% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 260 70% 60%;
+    --primary: 202 91% 19%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 240 10% 15%;
@@ -73,16 +74,16 @@
 
     --border: 240 10% 20%;
     --input: 240 10% 20%;
-    --ring: 260 70% 60%;
+    --ring: 202 91% 19%;
 
     --sidebar-background: 240 10% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 260 70% 60%;
+    --sidebar-primary: 202 91% 19%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 10% 15%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 10% 15%;
-    --sidebar-ring: 260 70% 60%;
+    --sidebar-ring: 202 91% 19%;
   }
 }
 
@@ -111,6 +112,83 @@
 
   .section-title:after {
     content: '';
-    @apply absolute w-20 h-1 bg-purple-500 left-1/2 -translate-x-1/2 bottom-0 -mb-2;
+    @apply absolute w-20 h-1 bg-ocean left-1/2 -translate-x-1/2 bottom-0 -mb-2;
   }
 }
+
+@layer utilities {
+  /* Add animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

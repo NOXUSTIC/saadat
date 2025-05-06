@@ -29,23 +29,24 @@ const Header = () => {
       ${scrolled ? "bg-background/90 backdrop-blur-md shadow-md" : "bg-transparent"}`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#home" className="font-bold text-xl md:text-2xl flex items-center gap-2">
-          <span className="text-purple-600">Saadat</span>
+        <a href="#home" className="font-bold text-xl md:text-2xl flex items-center gap-2 animate-fade-in">
+          <span className="text-ocean">Saadat</span>
           <span className="hidden sm:inline">S. Rahman</span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <a
               key={link.title}
               href={link.href}
-              className="text-foreground/80 hover:text-purple-500 transition-colors"
+              className="text-foreground/80 hover:text-ocean transition-colors animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               {link.title}
             </a>
           ))}
-          <Button className="bg-purple-600 hover:bg-purple-700">
+          <Button className="bg-ocean hover:bg-ocean-light animate-fade-in" style={{ animationDelay: '500ms' }}>
             <a href="#contact">Get In Touch</a>
           </Button>
         </nav>
@@ -84,18 +85,19 @@ const Header = () => {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <nav className="md:hidden bg-background border-t mt-4 py-4 px-6 flex flex-col gap-4 animate-fade-in">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <a
               key={link.title}
               href={link.href}
-              className="text-foreground/80 hover:text-purple-500 py-2 transition-colors"
+              className="text-foreground/80 hover:text-ocean py-2 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               {link.title}
             </a>
           ))}
           <Button
-            className="bg-purple-600 hover:bg-purple-700 w-full mt-2"
+            className="bg-ocean hover:bg-ocean-light w-full mt-2"
             onClick={() => setMobileMenuOpen(false)}
           >
             <a href="#contact">Get In Touch</a>
