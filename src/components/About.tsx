@@ -1,38 +1,39 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import Typewriter from "./Typewriter"; // Import the Typewriter component
 
 const About = () => {
+  // Text content for the typewriter paragraphs
+  const paragraph1 = "Hello! I'm Saadat S. Rahman, a versatile developer with expertise spanning fullstack development, embedded systems engineering, machine learning, 3D modeling, and PCB design. I thrive on projects that challenge me to integrate hardware and software solutions to solve complex problems.";
+  
+  const paragraph2 = "My journey began with a passion for understanding how things work at both the software and hardware level. This curiosity led me to explore various technologies across different domains, from web development with React and Tailwind CSS to designing circuit boards in KiCad and creating 3D models in Fusion360.";
+  
+  const paragraph3 = "Recently, I've been expanding my skills in machine learning and AI, working with technologies like PyTorch and NumPy to build classification models, prediction systems, and text generation algorithms. This interdisciplinary approach allows me to create solutions that leverage the power of both traditional programming and AI-driven insights.";
+
   return (
     <section id="about" className="section">
       <h2 className="section-title animate-fade-in">About Me</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
-        <div className="space-y-6 animate-slide-in-left" style={{animationDelay: "0.2s"}}>
-          <p className="text-lg">
-            Hello! I'm Saadat S. Rahman, a versatile developer with expertise spanning fullstack development,
-            embedded systems engineering, machine learning, 3D modeling, and PCB design. I thrive on projects that challenge me
-            to integrate hardware and software solutions to solve complex problems.
-          </p>
+        <div className="space-y-6">
+          <div className="text-lg min-h-16">
+            <Typewriter text={paragraph1} delay={20} startDelay={300} className="text-lg" />
+          </div>
           
-          <p className="text-lg">
-            My journey began with a passion for understanding how things work at both the software and hardware level.
-            This curiosity led me to explore various technologies across different domains, from web development with React
-            and Tailwind CSS to designing circuit boards in KiCad and creating 3D models in Fusion360.
-          </p>
+          <div className="text-lg min-h-16">
+            <Typewriter text={paragraph2} delay={20} startDelay={3500} className="text-lg" />
+          </div>
           
-          <p className="text-lg">
-            Recently, I've been expanding my skills in machine learning and AI, working with technologies like PyTorch and NumPy
-            to build classification models, prediction systems, and text generation algorithms. This interdisciplinary approach
-            allows me to create solutions that leverage the power of both traditional programming and AI-driven insights.
-          </p>
+          <div className="text-lg min-h-16">
+            <Typewriter text={paragraph3} delay={20} startDelay={7500} className="text-lg" />
+          </div>
         </div>
         
         <div className="space-y-6 animate-slide-in-right" style={{animationDelay: "0.4s"}}>
           <Card className="transform transition-all hover:scale-105 duration-300">
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-4 flex items-center">
-                <svg className="w-6 h-6 mr-2 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-6 h-6 mr-2 text-[#3A0C3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
                 My Mission
@@ -47,7 +48,7 @@ const About = () => {
           <Card className="transform transition-all hover:scale-105 duration-300" style={{animationDelay: "0.2s"}}>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-4 flex items-center">
-                <svg className="w-6 h-6 mr-2 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-6 h-6 mr-2 text-[#3A0C3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                 </svg>
                 My Approach
@@ -63,7 +64,7 @@ const About = () => {
           <Card className="transform transition-all hover:scale-105 duration-300" style={{animationDelay: "0.4s"}}>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-4 flex items-center">
-                <svg className="w-6 h-6 mr-2 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-6 h-6 mr-2 text-[#3A0C3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                 </svg>
                 Continuous Learning
