@@ -14,6 +14,10 @@ const Skills = () => {
       skills: ["Node.js", "Express", "RESTful APIs", "Database Design"]
     },
     {
+      title: "Machine Learning & AI",
+      skills: ["Python", "NumPy", "PyTorch", "Classification Models", "Prediction Models", "Text Generation", "Data Processing"]
+    },
+    {
       title: "Embedded Systems",
       skills: ["Raspberry Pi", "ATmega Microcontrollers", "ARM Chipsets", "IoT Development", "Firmware Programming"]
     },
@@ -69,7 +73,7 @@ const Skills = () => {
         <h3 className="text-2xl font-bold mb-4">My Development Philosophy</h3>
         <p className="text-lg">
           I believe in creating solutions that bridge hardware and software, combining my expertise in fullstack development,
-          embedded systems, and design to build innovative products and experiences. I'm passionate about the complete
+          embedded systems, machine learning, and design to build innovative products and experiences. I'm passionate about the complete
           product development lifecycle from concept to implementation.
         </p>
       </div>

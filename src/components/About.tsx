@@ -11,7 +11,7 @@ const About = () => {
         <div className="space-y-6">
           <p className="text-lg">
             Hello! I'm Saadat S. Rahman, a versatile developer with expertise spanning fullstack development,
-            embedded systems engineering, 3D modeling, and PCB design. I thrive on projects that challenge me
+            embedded systems engineering, machine learning, 3D modeling, and PCB design. I thrive on projects that challenge me
             to integrate hardware and software solutions to solve complex problems.
           </p>
           
@@ -22,9 +22,9 @@ const About = () => {
           </p>
           
           <p className="text-lg">
-            I enjoy the entire development process—from initial concept design and prototyping to final implementation
-            and deployment. Whether it's creating an intuitive web application, programming microcontrollers, or designing
-            functional 3D models, I'm committed to delivering high-quality solutions that meet real-world needs.
+            Recently, I've been expanding my skills in machine learning and AI, working with technologies like PyTorch and NumPy
+            to build classification models, prediction systems, and text generation algorithms. This interdisciplinary approach
+            allows me to create solutions that leverage the power of both traditional programming and AI-driven insights.
           </p>
         </div>
         
@@ -38,7 +38,7 @@ const About = () => {
                 My Mission
               </h3>
               <p>
-                To create innovative solutions that seamlessly integrate hardware and software, pushing the boundaries
+                To create innovative solutions that seamlessly integrate hardware, software, and AI technologies, pushing the boundaries
                 of what's possible and delivering products that make a meaningful impact.
               </p>
             </CardContent>
@@ -54,7 +54,7 @@ const About = () => {
               </h3>
               <p>
                 I take a holistic approach to development, considering both technical requirements and user needs.
-                Whether working on embedded systems or web applications, I focus on creating solutions that are
+                Whether working on embedded systems, web applications, or AI projects, I focus on creating solutions that are
                 efficient, maintainable, and user-friendly.
               </p>
             </CardContent>
@@ -71,7 +71,7 @@ const About = () => {
               <p>
                 Technology evolves rapidly, and I'm committed to growing with it. I continuously expand my knowledge
                 through hands-on projects, online courses, and community collaboration, ensuring I stay at the
-                forefront of both software and hardware development.
+                forefront of software, hardware, and AI development.
               </p>
             </CardContent>
           </Card>

@@ -2,32 +2,57 @@
 import React from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with user authentication, product catalog, shopping cart, and payment integration.",
-      tags: ["React", "Node.js", "MongoDB", "Express"],
-      liveUrl: "#",
-      githubUrl: "#",
-      imageSrc: "https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      title: "Tripti Token Hub",
+      description: "A comprehensive platform for managing digital tokens and cryptocurrency assets.",
+      tags: ["React", "TypeScript", "Web3", "Smart Contracts"],
+      liveUrl: "https://tripti-token-hub.vercel.app/",
+      githubUrl: "https://github.com/NOXUSTIC",
+      imageSrc: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1074&q=80"
     },
     {
-      title: "Task Management App",
-      description: "A productivity application for managing tasks, projects, and deadlines with a clean and intuitive interface.",
-      tags: ["TypeScript", "React", "Firebase", "TailwindCSS"],
+      title: "Movie Genre Classification",
+      description: "ML model that predicts movie genres based on plot summaries and metadata using NLP techniques.",
+      tags: ["Python", "PyTorch", "NLP", "Classification"],
       liveUrl: "#",
-      githubUrl: "#",
-      imageSrc: "https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+      githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_01",
+      imageSrc: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1025&q=80"
     },
     {
-      title: "Weather Dashboard",
-      description: "A weather application that displays current weather conditions and forecasts for any location using a modern UI.",
-      tags: ["JavaScript", "React", "API Integration", "CSS"],
+      title: "Fraud Detection System",
+      description: "Machine learning model to identify fraudulent transactions using anomaly detection algorithms.",
+      tags: ["Python", "NumPy", "Data Analysis", "ML"],
       liveUrl: "#",
-      githubUrl: "#",
-      imageSrc: "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+      githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_02",
+      imageSrc: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      title: "Customer Churn Prediction",
+      description: "Predictive model to identify customers likely to discontinue services, enabling proactive retention strategies.",
+      tags: ["Python", "ML", "Data Science", "Analytics"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_03",
+      imageSrc: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1074&q=80"
+    },
+    {
+      title: "Spam Email Classification",
+      description: "ML system that filters spam emails using text classification techniques with high accuracy.",
+      tags: ["Python", "NLP", "Classification", "ML"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_04",
+      imageSrc: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      title: "Handwritten Text Generation",
+      description: "AI model that generates realistic handwritten text using deep learning and neural networks.",
+      tags: ["Python", "PyTorch", "Deep Learning", "GAN"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_05",
+      imageSrc: "https://images.unsplash.com/photo-1527345931282-a268e9d4d899?auto=format&fit=crop&w=1074&q=80"
     }
   ];
 
@@ -37,7 +62,7 @@ const Projects = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {projects.map((project, index) => (
-          <Card key={index} className="overflow-hidden border-border hover:shadow-lg transition-all">
+          <Card key={index} className="overflow-hidden border-border hover:shadow-lg transition-all flex flex-col">
             <div className="h-48 overflow-hidden">
               <img 
                 src={project.imageSrc} 
@@ -48,16 +73,17 @@ const Projects = () => {
             <CardHeader>
               <CardTitle className="text-xl">{project.title}</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-grow">
               <p className="mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-2">
                 {project.tags.map((tag, tagIndex) => (
-                  <span 
+                  <Badge 
                     key={tagIndex}
-                    className="text-xs px-2 py-1 rounded-full bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300"
+                    variant="outline" 
+                    className="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300"
                   >
                     {tag}
-                  </span>
+                  </Badge>
                 ))}
               </div>
             </CardContent>
