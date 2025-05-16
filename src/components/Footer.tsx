@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0 animate-fade-in">
             <a href="#home" className="font-bold text-xl flex items-center gap-2">
-              <span className="text-black">Saadat</span>
+              <span className="text-[#30A5FF]">Saadat</span>
               <span>S. Rahman</span>
             </a>
             <p className="mt-2 text-muted-foreground">
