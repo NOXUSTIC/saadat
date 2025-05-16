@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden -z-20">
         <iframe 
           className="w-full h-full scale-125 pointer-events-none"
-          src="https://www.youtube.com/embed/6OyEpEnifMo?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=6OyEpEnifMo"
+          src="https://www.youtube.com/embed/6OyEpEnifMo?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=6OyEpEnifMo&start=0&end=81"
           title="Background Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           frameBorder="0"
