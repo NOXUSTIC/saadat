@@ -30,7 +30,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#home" className="font-bold text-xl md:text-2xl flex items-center gap-2 animate-fade-in">
-          <span className="text-black">Saadat</span>
+          <span className="text-[#30A5FF]">Saadat</span>
           <span className="hidden sm:inline">S. Rahman</span>
         </a>
 
