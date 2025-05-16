@@ -46,7 +46,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
     <span className={className}>
       {displayText}
       {cursor && currentIndex < text.length && (
-        <span className="inline-block w-1 h-4 bg-[#053F5C] ml-1 animate-pulse"></span>
+        <span className="inline-block w-1 h-5 bg-[#30A5FF] ml-1 animate-pulse"></span>
       )}
     </span>
   );
