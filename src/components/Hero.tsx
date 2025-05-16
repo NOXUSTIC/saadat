@@ -1,18 +1,41 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Typewriter from "./Typewriter";
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-16">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-ocean/10 via-transparent to-transparent" />
-        <div className="absolute right-0 top-1/3 w-96 h-96 bg-ocean/20 rounded-full filter blur-3xl" />
-        <div className="absolute left-20 bottom-1/4 w-64 h-64 bg-ocean-light/20 rounded-full filter blur-3xl" />
+      {/* YouTube Video Background */}
+      <div className="absolute inset-0 overflow-hidden -z-20">
+        <iframe 
+          className="w-full h-full scale-125 pointer-events-none"
+          src="https://www.youtube.com/embed/6OyEpEnifMo?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=6OyEpEnifMo"
+          title="Background Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          frameBorder="0"
+        ></iframe>
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
       </div>
       
-      <div className="container px-4 sm:px-6 flex flex-col items-center text-center">
-        <span className="inline-block py-1 px-3 mb-4 bg-ocean/10 text-ocean-light text-sm font-medium rounded-full animate-fade-in">
+      {/* Thunderstorm Animation */}
+      <div className="thunderstorm absolute inset-0 -z-10">
+        <div className="lightning-container">
+          <div className="lightning white"></div>
+          <div className="lightning red"></div>
+        </div>
+        <div className="lightning-container">
+          <div className="lightning white"></div>
+          <div className="lightning red" style={{animationDelay: "1.5s"}}></div>
+        </div>
+        <div className="lightning-container">
+          <div className="lightning white"></div>
+          <div className="lightning red" style={{animationDelay: "3s"}}></div>
+        </div>
+      </div>
+
+      <div className="container px-4 sm:px-6 flex flex-col items-center text-center z-10">
+        <span className="inline-block py-1 px-3 mb-4 bg-ocean/20 text-ocean-light text-sm font-medium rounded-full animate-fade-in">
           Fullstack & Embedded Systems Engineer
         </span>
         
@@ -20,10 +43,12 @@ const Hero = () => {
           Hi, I'm <span className="text-ocean-light">Saadat S. Rahman</span>
         </h1>
         
-        <p className="max-w-2xl text-xl text-foreground/80 mb-8 md:mb-10 animate-fade-up" style={{animationDelay: "0.2s"}}>
-          Creating innovative solutions at the intersection of software, hardware, and design.
-          Building impactful experiences with modern web technologies and embedded systems.
-        </p>
+        <div className="max-w-2xl text-xl text-foreground/90 mb-8 md:mb-10 animate-fade-up" style={{animationDelay: "0.2s"}}>
+          <Typewriter 
+            text="Creating innovative solutions at the intersection of software, hardware, and design. Building impactful experiences with modern web technologies and embedded systems."
+            delay={30}
+          />
+        </div>
         
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{animationDelay: "0.3s"}}>
           <Button className="bg-ocean hover:bg-ocean-light text-lg px-6 py-6" asChild>
@@ -68,7 +93,7 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <a href="#about">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -80,3 +105,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
