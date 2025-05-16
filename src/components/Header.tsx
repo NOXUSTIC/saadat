@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -30,7 +29,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#home" className="font-bold text-xl md:text-2xl flex items-center gap-2 animate-fade-in">
-          <span className="text-ocean">Saadat</span>
+          <span className="text-[#30A5FF]">Saadat</span>
           <span className="hidden sm:inline">S. Rahman</span>
         </a>
 
@@ -40,13 +39,13 @@ const Header = () => {
             <a
               key={link.title}
               href={link.href}
-              className="text-foreground/80 hover:text-ocean transition-colors animate-fade-in"
+              className="text-foreground/80 hover:text-[#30A5FF] transition-colors animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {link.title}
             </a>
           ))}
-          <Button className="bg-ocean hover:bg-ocean-light animate-fade-in" style={{ animationDelay: '500ms' }}>
+          <Button className="bg-[#30A5FF] hover:bg-[#53B3FF] animate-fade-in" style={{ animationDelay: '500ms' }}>
             <a href="#contact">Get In Touch</a>
           </Button>
         </nav>
@@ -89,7 +88,7 @@ const Header = () => {
             <a
               key={link.title}
               href={link.href}
-              className="text-foreground/80 hover:text-ocean py-2 transition-colors"
+              className="text-foreground/80 hover:text-[#30A5FF] py-2 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
               style={{ animationDelay: `${index * 100}ms` }}
             >
@@ -97,7 +96,7 @@ const Header = () => {
             </a>
           ))}
           <Button
-            className="bg-ocean hover:bg-ocean-light w-full mt-2"
+            className="bg-[#30A5FF] hover:bg-[#53B3FF] w-full mt-2"
             onClick={() => setMobileMenuOpen(false)}
           >
             <a href="#contact">Get In Touch</a>
