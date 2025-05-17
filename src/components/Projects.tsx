@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -52,7 +51,7 @@ const Projects = () => {
       tags: ["Python", "PyTorch", "Deep Learning", "GAN"],
       liveUrl: "#",
       githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_05",
-      imageSrc: "https://images.unsplash.com/photo-1527345931282-a268e9d4d899?auto=format&fit=crop&w=1074&q=80"
+      imageSrc: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1074&q=80"
     }
   ];
 
