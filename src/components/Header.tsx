@@ -30,7 +30,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#home" className="font-bold text-xl md:text-2xl flex items-center gap-2 animate-fade-in">
-          <span className="text-[#30A5FF]">Saadat</span>
+          <span className="text-black">Saadat</span>
           <span className="hidden sm:inline">S. Rahman</span>
         </a>
 
@@ -46,7 +46,7 @@ const Header = () => {
               {link.title}
             </a>
           ))}
-          <Button className="bg-black hover:bg-gray-800 animate-fade-in" style={{ animationDelay: '500ms' }}>
+          <Button className="bg-[#30A5FF] hover:bg-[#2694e8] animate-fade-in" style={{ animationDelay: '500ms' }}>
             <a href="#contact">Get In Touch</a>
           </Button>
         </nav>
@@ -97,7 +97,7 @@ const Header = () => {
             </a>
           ))}
           <Button
-            className="bg-black hover:bg-gray-800 w-full mt-2"
+            className="bg-[#30A5FF] hover:bg-[#2694e8] w-full mt-2"
             onClick={() => setMobileMenuOpen(false)}
           >
             <a href="#contact">Get In Touch</a>
