@@ -1,7 +1,9 @@
+
 import React from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Code, Terminal, Rocket, FileCode, BookOpen, Layers } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -11,7 +13,7 @@ const Projects = () => {
       tags: ["React", "TypeScript", "Web3", "Smart Contracts"],
       liveUrl: "https://tripti-token-hub.vercel.app/",
       githubUrl: "https://github.com/NOXUSTIC",
-      imageSrc: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1074&q=80"
+      icon: <Rocket className="w-16 h-16 text-[#30A5FF]" />
     },
     {
       title: "Movie Genre Classification",
@@ -19,7 +21,7 @@ const Projects = () => {
       tags: ["Python", "PyTorch", "NLP", "Classification"],
       liveUrl: "#",
       githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_01",
-      imageSrc: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1025&q=80"
+      icon: <FileCode className="w-16 h-16 text-[#30A5FF]" />
     },
     {
       title: "Fraud Detection System",
@@ -27,7 +29,7 @@ const Projects = () => {
       tags: ["Python", "NumPy", "Data Analysis", "ML"],
       liveUrl: "#",
       githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_02",
-      imageSrc: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1170&q=80"
+      icon: <Layers className="w-16 h-16 text-[#30A5FF]" />
     },
     {
       title: "Customer Churn Prediction",
@@ -35,7 +37,7 @@ const Projects = () => {
       tags: ["Python", "ML", "Data Science", "Analytics"],
       liveUrl: "#",
       githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_03",
-      imageSrc: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1074&q=80"
+      icon: <BookOpen className="w-16 h-16 text-[#30A5FF]" />
     },
     {
       title: "Spam Email Classification",
@@ -43,7 +45,7 @@ const Projects = () => {
       tags: ["Python", "NLP", "Classification", "ML"],
       liveUrl: "#",
       githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_04",
-      imageSrc: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1170&q=80"
+      icon: <Code className="w-16 h-16 text-[#30A5FF]" />
     },
     {
       title: "Handwritten Text Generation",
@@ -51,7 +53,7 @@ const Projects = () => {
       tags: ["Python", "PyTorch", "Deep Learning", "GAN"],
       liveUrl: "#",
       githubUrl: "https://github.com/NOXUSTIC/CODSOFT/tree/master/CODSOFT_05",
-      imageSrc: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1074&q=80"
+      icon: <Terminal className="w-16 h-16 text-[#30A5FF]" />
     }
   ];
 
@@ -66,12 +68,8 @@ const Projects = () => {
             className="overflow-hidden border-border hover:shadow-lg transition-all flex flex-col animate-fade-up"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <div className="h-48 overflow-hidden">
-              <img 
-                src={project.imageSrc} 
-                alt={project.title} 
-                className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
-              />
+            <div className="h-48 overflow-hidden flex items-center justify-center bg-black/5 p-6">
+              {project.icon}
             </div>
             <CardHeader>
               <CardTitle className="text-xl">{project.title}</CardTitle>
