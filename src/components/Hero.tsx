@@ -1,19 +1,73 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Typewriter from "./Typewriter";
 
 const Hero = () => {
+  const playerRef = useRef(null);
+  
+  useEffect(() => {
+    // Load YouTube API
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+    // Initialize player when API is ready
+    window.onYouTubeIframeAPIReady = () => {
+      playerRef.current = new window.YT.Player('youtube-background', {
+        videoId: '6OyEpEnifMo',
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          controls: 0,
+          showinfo: 0,
+          rel: 0,
+          iv_load_policy: 3,
+          modestbranding: 1,
+          start: 0,
+          loop: 1,
+          playlist: '6OyEpEnifMo'
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    };
+    
+    // When player is ready
+    const onPlayerReady = (event) => {
+      event.target.playVideo();
+    };
+    
+    // Monitor player state changes
+    const onPlayerStateChange = (event) => {
+      // When video ends or is at the specified end time
+      if (event.data === window.YT.PlayerState.PLAYING) {
+        const checkTime = setInterval(() => {
+          if (playerRef.current && playerRef.current.getCurrentTime) {
+            const currentTime = playerRef.current.getCurrentTime();
+            if (currentTime >= 81) { // 1:21 (81 seconds)
+              playerRef.current.seekTo(0);
+            }
+          }
+        }, 1000);
+        
+        return () => clearInterval(checkTime);
+      }
+    };
+    
+    // Clean up
+    return () => {
+      window.onYouTubeIframeAPIReady = null;
+    };
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-16">
       {/* YouTube Video Background */}
       <div className="absolute inset-0 overflow-hidden -z-20">
-        <iframe 
-          className="w-full h-full scale-125 pointer-events-none"
-          src="https://www.youtube.com/embed/6OyEpEnifMo?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=6OyEpEnifMo&start=0&end=81&enablejsapi=1"
-          title="Background Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          frameBorder="0"
-        ></iframe>
+        <div id="youtube-background" className="w-full h-full scale-125 pointer-events-none"></div>
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
       </div>
       
