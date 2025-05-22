@@ -40,7 +40,6 @@ const Header = () => {
           <a href="/#about" className="text-foreground/80 hover:text-foreground transition-colors">About</a>
           <a href="/#skills" className="text-foreground/80 hover:text-foreground transition-colors">Skills</a>
           <a href="/#projects" className="text-foreground/80 hover:text-foreground transition-colors">Projects</a>
-          <Link to="/models" className="text-foreground/80 hover:text-foreground transition-colors">3D Models</Link>
           <a href="/#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
           <Button className="bg-[#053F5C] hover:bg-[#30A5FF]" asChild>
             <a href="/#contact">Get in Touch</a>
@@ -87,13 +86,6 @@ const Header = () => {
             >
               Projects
             </a>
-            <Link 
-              to="/models"
-              className="text-foreground/80 hover:text-foreground transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              3D Models
-            </Link>
             <a 
               href="/#contact" 
               className="text-foreground/80 hover:text-foreground transition-colors py-2"
