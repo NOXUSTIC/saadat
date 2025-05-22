@@ -3,7 +3,8 @@ import React from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Code, Terminal, Rocket, FileCode, BookOpen, Layers } from "lucide-react";
+import { Code, Terminal, Rocket, FileCode, BookOpen, Layers, Cube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
@@ -111,12 +112,20 @@ const Projects = () => {
       </div>
 
       <div className="mt-16 text-center animate-fade-up" style={{animationDelay: "0.6s"}}>
-        <p className="text-lg mb-4">Interested in seeing more of my work?</p>
-        <Button className="bg-ocean hover:bg-ocean-light" asChild>
-          <a href="https://github.com/NOXUSTIC" target="_blank" rel="noopener noreferrer">
-            View More on GitHub
-          </a>
-        </Button>
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <Button className="bg-ocean hover:bg-ocean-light" asChild>
+            <a href="https://github.com/NOXUSTIC" target="_blank" rel="noopener noreferrer">
+              View More on GitHub
+            </a>
+          </Button>
+          
+          <Button className="bg-[#053F5C] hover:bg-[#30A5FF]" asChild>
+            <Link to="/3d-models">
+              <Cube className="w-4 h-4 mr-2" />
+              View 3D Models
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
