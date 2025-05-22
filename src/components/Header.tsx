@@ -1,107 +1,116 @@
+
 import React, { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const navLinks = [
-    { title: "Home", href: "#home" },
-    { title: "About", href: "#about" },
-    { title: "Skills", href: "#skills" },
-    { title: "Projects", href: "#projects" },
-    { title: "Contact", href: "#contact" },
-  ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 
-      ${scrolled ? "bg-background/90 backdrop-blur-md shadow-md" : "bg-transparent"}`}
+      className={cn(
+        "fixed w-full top-0 z-50 transition-all duration-300",
+        isScrolled ? "bg-background/90 backdrop-blur-md border-b border-border shadow-md py-2" : "bg-transparent py-4"
+      )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#home" className="font-bold text-xl md:text-2xl flex items-center gap-2 animate-fade-in">
-          <span className="text-[#30A5FF]">Saadat</span>
-          <span className="hidden sm:inline">S. Rahman</span>
-        </a>
+      <div className="container px-4 mx-auto flex justify-between items-center">
+        <Link to="/" className="text-2xl font-bold text-[#30A5FF]">
+          Saadat
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link, index) => (
-            <a
-              key={link.title}
-              href={link.href}
-              className="text-foreground/80 hover:text-black transition-colors animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {link.title}
-            </a>
-          ))}
-          <Button className="bg-[#30A5FF] hover:bg-[#2694e8] animate-fade-in" style={{ animationDelay: '500ms' }}>
-            <a href="#contact">Get In Touch</a>
+          <a href="/#about" className="text-foreground/80 hover:text-foreground transition-colors">About</a>
+          <a href="/#skills" className="text-foreground/80 hover:text-foreground transition-colors">Skills</a>
+          <a href="/#projects" className="text-foreground/80 hover:text-foreground transition-colors">Projects</a>
+          <Link to="/models" className="text-foreground/80 hover:text-foreground transition-colors">3D Models</Link>
+          <a href="/#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
+          <Button className="bg-[#053F5C] hover:bg-[#30A5FF]" asChild>
+            <a href="/#contact">Get in Touch</a>
           </Button>
         </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-foreground p-2" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {mobileMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            {isMobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
             )}
           </svg>
         </button>
       </div>
 
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <nav className="md:hidden bg-background border-t mt-4 py-4 px-6 flex flex-col gap-4 animate-fade-in">
-          {navLinks.map((link, index) => (
-            <a
-              key={link.title}
-              href={link.href}
-              className="text-foreground/80 hover:text-black py-2 transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ animationDelay: `${index * 100}ms` }}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
+          <nav className="container px-4 py-4 flex flex-col gap-4">
+            <a 
+              href="/#about" 
+              className="text-foreground/80 hover:text-foreground transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              {link.title}
+              About
             </a>
-          ))}
-          <Button
-            className="bg-[#30A5FF] hover:bg-[#2694e8] w-full mt-2"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <a href="#contact">Get In Touch</a>
-          </Button>
-        </nav>
+            <a 
+              href="/#skills" 
+              className="text-foreground/80 hover:text-foreground transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Skills
+            </a>
+            <a 
+              href="/#projects" 
+              className="text-foreground/80 hover:text-foreground transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Projects
+            </a>
+            <Link 
+              to="/models"
+              className="text-foreground/80 hover:text-foreground transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              3D Models
+            </Link>
+            <a 
+              href="/#contact" 
+              className="text-foreground/80 hover:text-foreground transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </a>
+            <Button className="bg-[#053F5C] hover:bg-[#30A5FF] mt-2 w-full" asChild>
+              <a 
+                href="/#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Get in Touch
+              </a>
+            </Button>
+          </nav>
+        </div>
       )}
     </header>
   );

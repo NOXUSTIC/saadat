@@ -13,6 +13,22 @@ const Hero = () => {
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     
+    // Define YT types for TypeScript
+    interface YT {
+      Player: any;
+      PlayerState: {
+        PLAYING: number;
+      };
+    }
+    
+    // Declare global types
+    declare global {
+      interface Window {
+        onYouTubeIframeAPIReady: () => void;
+        YT: YT;
+      }
+    }
+    
     // Initialize player when API is ready
     window.onYouTubeIframeAPIReady = () => {
       playerRef.current = new window.YT.Player('youtube-background', {
