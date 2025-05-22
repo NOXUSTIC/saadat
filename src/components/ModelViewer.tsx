@@ -1,9 +1,10 @@
 
 import React, { Suspense, useRef, useState } from "react";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls, Environment, useGLTF, Html } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
+import * as THREE from "three";
 
 // Model component that loads and displays the 3D model
 const Model = ({ modelPath, scale = 40, position = [0, 0, 0] }) => {
@@ -105,7 +106,7 @@ const ModelViewer = () => {
         >
           Demo Model
         </Button>
-        {/* Add buttons for your own models once you upload them */}
+        {/* Uncomment this section once you have your own models */}
         {/* {models.map((model, index) => (
           <Button
             key={index}
