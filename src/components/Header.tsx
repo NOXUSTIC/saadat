@@ -32,7 +32,7 @@ const Header = () => {
     >
       <div className="container px-4 mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-[#30A5FF]">
-          Saadat
+          Saadat <span className="text-white">S Rahman</span>
         </Link>
 
         {/* Desktop Navigation */}
