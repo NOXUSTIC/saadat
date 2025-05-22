@@ -3,35 +3,50 @@ import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Typewriter from "./Typewriter";
 
+// Define types for YouTube API
+interface YTPlayer {
+  playVideo: () => void;
+  getCurrentTime: () => number;
+  seekTo: (time: number) => void;
+}
+
+interface YouTubeWindow extends Window {
+  onYouTubeIframeAPIReady?: () => void;
+  YT?: {
+    Player: new (elementId: string, options: any) => YTPlayer;
+    PlayerState: {
+      PLAYING: number;
+    };
+  };
+}
+
+declare global {
+  interface Window {
+    onYouTubeIframeAPIReady?: () => void;
+    YT?: {
+      Player: new (elementId: string, options: any) => YTPlayer;
+      PlayerState: {
+        PLAYING: number;
+      };
+    };
+  }
+}
+
 const Hero = () => {
-  const playerRef = useRef(null);
+  const playerRef = useRef<YTPlayer | null>(null);
   
   useEffect(() => {
     // Load YouTube API
     const tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    
-    // Define YT types for TypeScript
-    interface YT {
-      Player: any;
-      PlayerState: {
-        PLAYING: number;
-      };
-    }
-    
-    // Declare global types
-    declare global {
-      interface Window {
-        onYouTubeIframeAPIReady: () => void;
-        YT: YT;
-      }
-    }
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
     
     // Initialize player when API is ready
-    window.onYouTubeIframeAPIReady = () => {
-      playerRef.current = new window.YT.Player('youtube-background', {
+    (window as YouTubeWindow).onYouTubeIframeAPIReady = () => {
+      if (!(window as YouTubeWindow).YT) return;
+      
+      playerRef.current = new (window as YouTubeWindow).YT.Player('youtube-background', {
         videoId: '6OyEpEnifMo',
         playerVars: {
           autoplay: 1,
@@ -53,14 +68,14 @@ const Hero = () => {
     };
     
     // When player is ready
-    const onPlayerReady = (event) => {
+    const onPlayerReady = (event: any) => {
       event.target.playVideo();
     };
     
     // Monitor player state changes
-    const onPlayerStateChange = (event) => {
+    const onPlayerStateChange = (event: any) => {
       // When video ends or is at the specified end time
-      if (event.data === window.YT.PlayerState.PLAYING) {
+      if (event.data === (window as YouTubeWindow).YT?.PlayerState.PLAYING) {
         const checkTime = setInterval(() => {
           if (playerRef.current && playerRef.current.getCurrentTime) {
             const currentTime = playerRef.current.getCurrentTime();
@@ -76,7 +91,7 @@ const Hero = () => {
     
     // Clean up
     return () => {
-      window.onYouTubeIframeAPIReady = null;
+      (window as YouTubeWindow).onYouTubeIframeAPIReady = undefined;
     };
   }, []);
 

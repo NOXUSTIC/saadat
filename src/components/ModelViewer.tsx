@@ -1,7 +1,6 @@
 
 import React, { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls, Environment, useGLTF, Html } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
 import * as THREE from "three";
