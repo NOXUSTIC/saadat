@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Code, Terminal, Rocket, FileCode, BookOpen, Layers, Box3d } from "lucide-react";
+import { Code, Terminal, Rocket, FileCode, BookOpen, Layers, Box } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -121,7 +121,7 @@ const Projects = () => {
           
           <Button className="bg-[#053F5C] hover:bg-[#30A5FF]" asChild>
             <Link to="/3d-models">
-              <Cube className="w-4 h-4 mr-2" />
+              <Box className="w-4 h-4 mr-2" />
               View 3D Models
             </Link>
           </Button>

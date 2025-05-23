@@ -1,3 +1,4 @@
+
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -5,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Box, Box3d, Package } from "lucide-react";
+import { Box, Package } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ModelGallery = () => {
@@ -16,16 +17,18 @@ const ModelGallery = () => {
       description: "Line Following Robot design with detailed components and structure.",
       category: "product",
       imageUrl: "/placeholder.svg",
-      icon: <Box3d className="w-10 h-10 text-[#30A5FF]" />
+      icon: <Box className="w-10 h-10 text-[#30A5FF]" />
     },
     {
+      id: "interior-design",
       title: "Architectural Interior Design",
       description: "Modern living room interior with detailed furniture and lighting setup.",
       category: "architecture",
       imageUrl: "/placeholder.svg",
-      icon: <Cube className="w-10 h-10 text-[#30A5FF]" />
+      icon: <Box className="w-10 h-10 text-[#30A5FF]" />
     },
     {
+      id: "product-viz",
       title: "Product Visualization",
       description: "3D product rendering of a smart device with photorealistic materials.",
       category: "product",
@@ -33,6 +36,7 @@ const ModelGallery = () => {
       icon: <Package className="w-10 h-10 text-[#30A5FF]" />
     },
     {
+      id: "character-model",
       title: "Character Model",
       description: "Stylized character model with rigging and animation setup.",
       category: "character",
@@ -40,13 +44,15 @@ const ModelGallery = () => {
       icon: <Box className="w-10 h-10 text-[#30A5FF]" />
     },
     {
+      id: "environment-design",
       title: "Environmental Design",
       description: "Detailed outdoor environment with terrain and vegetation.",
       category: "environment",
       imageUrl: "/placeholder.svg",
-      icon: <Cube className="w-10 h-10 text-[#30A5FF]" />
+      icon: <Box className="w-10 h-10 text-[#30A5FF]" />
     },
     {
+      id: "concept-vehicle",
       title: "Concept Vehicle",
       description: "Futuristic vehicle concept with detailed interior and exterior.",
       category: "product",
@@ -54,6 +60,7 @@ const ModelGallery = () => {
       icon: <Package className="w-10 h-10 text-[#30A5FF]" />
     },
     {
+      id: "game-assets",
       title: "Game Asset Pack",
       description: "Collection of low-poly game assets optimized for real-time rendering.",
       category: "game",
