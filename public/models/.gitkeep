@@ -1,2 +1,10 @@
 
 # This folder is for storing 3D models in glTF/GLB format
+
+Since STEP files can't be loaded directly in the browser, you need to convert your model 
+to a format supported by Three.js (GLB or glTF is recommended). Place the converted model here.
+
+Conversion can be done using tools like:
+- Blender
+- Autodesk FBX Converter
+- Online converters like https://www.creators3d.com/online-viewer

@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,10 +5,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Box, Cube, Package } from "lucide-react";
+import { Box, Box3d, Package } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ModelGallery = () => {
   const models = [
+    {
+      id: "lfr-model",
+      title: "LFR Design",
+      description: "Line Following Robot design with detailed components and structure.",
+      category: "product",
+      imageUrl: "/placeholder.svg",
+      icon: <Box3d className="w-10 h-10 text-[#30A5FF]" />
+    },
     {
       title: "Architectural Interior Design",
       description: "Modern living room interior with detailed furniture and lighting setup.",
@@ -111,6 +119,7 @@ const ModelGallery = () => {
 
 interface ModelCardProps {
   model: {
+    id: string;
     title: string;
     description: string;
     category: string;
@@ -142,8 +151,10 @@ const ModelCard = ({ model }: ModelCardProps) => {
         <Badge variant="outline" className="bg-ocean/10 text-ocean-light">
           {model.category}
         </Badge>
-        <Button size="sm" className="bg-[#053F5C] hover:bg-[#30A5FF]">
-          View Details
+        <Button size="sm" className="bg-[#053F5C] hover:bg-[#30A5FF]" asChild>
+          <Link to={`/3d-models/${model.id}`}>
+            View Details
+          </Link>
         </Button>
       </CardFooter>
     </Card>
