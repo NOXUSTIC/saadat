@@ -24,5 +24,13 @@ export default defineConfig(({ mode }) => ({
   },
   optimizeDeps: {
     exclude: ['opencascade.js']
+  },
+  build: {
+    rollupOptions: {
+      external: ['opencascade.js/dist/opencascade.wasm.wasm'],
+    },
+  },
+  worker: {
+    format: 'es'
   }
 }));
