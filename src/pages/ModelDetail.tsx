@@ -13,7 +13,7 @@ const ModelDetail = () => {
   
   // For now, we'll just show the LFR.step model
   // In a real app, you could use the id parameter to choose which model to display
-  const modelPath = "public/models/LFR.glb"; // Path to your converted model
+  const modelPath = "public/models/LFR/LFR.obj"; // Path to your converted model
 
   return (
     <div className="min-h-screen">
