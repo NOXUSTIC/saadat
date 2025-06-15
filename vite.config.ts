@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       external: (id) => {
-        return id.includes('opencascade.wasm') || id.includes('.wasm');
+        return id.includes('opencascade') || id.includes('.wasm');
       },
     },
   },
