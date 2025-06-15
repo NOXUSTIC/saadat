@@ -11,7 +11,7 @@ const ModelDetail = () => {
   const { id } = useParams();
   
   // Use the STEP file that exists in the public folder
-  const modelPath = "/models/LFR.3MF";
+  const modelPath = "/models/LFR.glb";
 
   return (
     <div className="min-h-screen">
