@@ -1,0 +1,15 @@
+
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('STEP file generated for LFR model'),'2;1');
+FILE_NAME('LFR.step','2024-01-01T00:00:00',('Saadat S Rahman'),('NOXUSTIC'),'Sample STEP file','Sample STEP file','');
+FILE_SCHEMA(('AUTOMOTIVE_DESIGN'));
+ENDSEC;
+DATA;
+/* Sample STEP data - replace with actual LFR model data */
+#1 = CARTESIAN_POINT('',( 0.0, 0.0, 0.0 ));
+#2 = DIRECTION('',( 0.0, 0.0, 1.0 ));
+#3 = DIRECTION('',( 1.0, 0.0, 0.0 ));
+#4 = AXIS2_PLACEMENT_3D('',#1,#2,#3);
+ENDSEC;
+END-ISO-10303-21;

@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,9 +10,8 @@ import { Link } from "react-router-dom";
 const ModelDetail = () => {
   const { id } = useParams();
   
-  // For now, we'll just show the LFR.step model
-  // In a real app, you could use the id parameter to choose which model to display
-  const modelPath = "public/models/LFR/LFR.glb"; // Path to your converted model
+  // Use the STEP file that exists in the public folder
+  const modelPath = "/models/LFR/LFR.step";
 
   return (
     <div className="min-h-screen">
@@ -29,9 +27,9 @@ const ModelDetail = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6">3D Model Viewer</h1>
+          <h1 className="text-4xl font-bold mb-6">STEP Model Viewer</h1>
           <p className="mb-8 text-foreground/80">
-            Interact with the 3D model below. Click and drag to rotate, scroll to zoom.
+            Interact with the STEP model below using OpenCascade.js. This viewer supports native CAD file formats.
           </p>
           
           <ModelViewer modelPath={modelPath} />
@@ -39,12 +37,12 @@ const ModelDetail = () => {
           <div className="mt-8 bg-card p-6 rounded-lg border border-border">
             <h2 className="text-2xl font-semibold mb-4">About This Model</h2>
             <p className="mb-4">
-              This is a detailed 3D model created by Saadat S Rahman. The model demonstrates professional 3D design skills
-              and attention to detail.
+              This STEP model is displayed using OpenCascade.js, a powerful JavaScript library that enables 
+              native CAD file viewing in web browsers without requiring file conversion.
             </p>
             <p>
-              Created using industry-standard 3D modeling tools and techniques, this model showcases my ability to create
-              high-quality 3D assets for various applications.
+              OpenCascade.js provides advanced CAD functionality including precise geometry representation, 
+              measurements, and professional-grade visualization capabilities.
             </p>
           </div>
         </div>
