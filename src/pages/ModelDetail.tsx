@@ -20,7 +20,7 @@ const ModelDetail = () => {
       format: "GLB"
     },
     "line-follower": {
-      path: "/models/line-follower.glb",
+      path: "/models/LFR.glb",
       title: "Line Follower Robot",
       description: "Autonomous line following robot with sensors and control systems for precise path navigation and obstacle detection.",
       format: "GLB"
