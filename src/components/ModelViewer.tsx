@@ -1,31 +1,36 @@
 
-import React from "react";
-import ThreeViewer from "./ThreeViewer";
+import React, { useRef, useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, useGLTF, Stage, PresentationControls } from "@react-three/drei";
+
+const Model = ({ modelPath }: { modelPath: string }) => {
+  const { scene } = useGLTF(modelPath);
+  
+  return <primitive object={scene} scale={1} />;
+};
 
 interface ModelViewerProps {
   modelPath: string;
 }
 
 const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath }) => {
-  // Check file extension to determine if supported
-  const fileExtension = modelPath.toLowerCase().split('.').pop();
-  
-  // Supported 3D formats for Three.js viewer
-  const supportedFormats = ['glb', 'gltf', 'obj', 'fbx', 'dae', 'ply', 'stl'];
-  
-  if (fileExtension && supportedFormats.includes(fileExtension)) {
-    return <ThreeViewer modelPath={modelPath} />;
-  }
-
-  // Unsupported format
   return (
-    <div className="w-full h-[500px] bg-gray-50 border border-gray-200 rounded-lg flex items-center justify-center">
-      <div className="text-center">
-        <p className="text-gray-600 mb-4">Unsupported file format: {fileExtension}</p>
-        <p className="text-sm text-gray-500">
-          Supported formats: GLB, GLTF, OBJ, FBX, DAE, PLY, STL
-        </p>
-      </div>
+    <div className="w-full h-[500px] bg-black/5 rounded-lg overflow-hidden">
+      <Canvas shadows dpr={[1, 2]} camera={{ fov: 45 }}>
+        <color attach="background" args={["#f5f5f5"]} />
+        <PresentationControls
+          global
+          zoom={0.8}
+          rotation={[0, -Math.PI / 4, 0]}
+          polar={[0, Math.PI / 4]}
+          azimuth={[-Math.PI / 4, Math.PI / 4]}
+        >
+          <Stage environment="city" intensity={0.6}>
+            <Model modelPath={modelPath} />
+          </Stage>
+        </PresentationControls>
+        <OrbitControls enableZoom={true} enablePan={true} enableRotate={true} />
+      </Canvas>
     </div>
   );
 };

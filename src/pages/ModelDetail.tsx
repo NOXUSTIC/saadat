@@ -11,23 +11,9 @@ import { Link } from "react-router-dom";
 const ModelDetail = () => {
   const { id } = useParams();
   
-  // Define different models with their paths and info
-  const models = {
-    "mars-rover": {
-      path: "/models/mars-rover.glb",
-      title: "Mars Rover Exploration Vehicle",
-      description: "Detailed 3D model of a Mars exploration rover with realistic components, solar panels, and scientific instruments.",
-      format: "GLB"
-    },
-    "line-follower": {
-      path: "/models/LFR.glb",
-      title: "Line Follower Robot",
-      description: "Autonomous line following robot with sensors and control systems for precise path navigation and obstacle detection.",
-      format: "GLB"
-    }
-  };
-
-  const currentModel = models[id as keyof typeof models] || models["mars-rover"];
+  // For now, we'll just show the LFR.step model
+  // In a real app, you could use the id parameter to choose which model to display
+  const modelPath = "/models/LFR.glb"; // Path to your converted model
 
   return (
     <div className="min-h-screen">
@@ -43,24 +29,22 @@ const ModelDetail = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6">{currentModel.title}</h1>
+          <h1 className="text-4xl font-bold mb-6">3D Model Viewer</h1>
           <p className="mb-8 text-foreground/80">
-            {currentModel.description}
+            Interact with the 3D model below. Click and drag to rotate, scroll to zoom.
           </p>
           
-          <ModelViewer modelPath={currentModel.path} />
+          <ModelViewer modelPath={modelPath} />
           
           <div className="mt-8 bg-card p-6 rounded-lg border border-border">
             <h2 className="text-2xl font-semibold mb-4">About This Model</h2>
             <p className="mb-4">
-              Format: <span className="font-mono bg-muted px-2 py-1 rounded">{currentModel.format}</span>
-            </p>
-            <p className="mb-4">
-              This 3D model viewer supports GLB and GLTF formats for optimal performance and quality.
-              Each model is rendered using Three.js for realistic lighting and materials.
+              This is a detailed 3D model created by Saadat S Rahman. The model demonstrates professional 3D design skills
+              and attention to detail.
             </p>
             <p>
-              Use the mouse to interact with the model: rotate, zoom, and pan to explore all angles and details.
+              Created using industry-standard 3D modeling tools and techniques, this model showcases my ability to create
+              high-quality 3D assets for various applications.
             </p>
           </div>
         </div>
