@@ -1,6 +1,5 @@
 
 import React from "react";
-import StepViewer from "./StepViewer";
 import ThreeViewer from "./ThreeViewer";
 
 interface ModelViewerProps {
@@ -8,16 +7,12 @@ interface ModelViewerProps {
 }
 
 const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath }) => {
-  // Check file extension to determine viewer type
+  // Check file extension to determine if supported
   const fileExtension = modelPath.toLowerCase().split('.').pop();
   
-  // STEP files use OpenCascade viewer
-  if (fileExtension === 'step' || fileExtension === 'stp') {
-    return <StepViewer modelPath={modelPath} />;
-  }
-  
-  // Common 3D formats use Three.js viewer
+  // Supported 3D formats for Three.js viewer
   const supportedFormats = ['glb', 'gltf', 'obj', 'fbx', 'dae', 'ply', 'stl'];
+  
   if (fileExtension && supportedFormats.includes(fileExtension)) {
     return <ThreeViewer modelPath={modelPath} />;
   }
@@ -28,7 +23,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath }) => {
       <div className="text-center">
         <p className="text-gray-600 mb-4">Unsupported file format: {fileExtension}</p>
         <p className="text-sm text-gray-500">
-          Supported formats: GLB, GLTF, OBJ, FBX, DAE, PLY, STL, STEP, STP
+          Supported formats: GLB, GLTF, OBJ, FBX, DAE, PLY, STL
         </p>
       </div>
     </div>
