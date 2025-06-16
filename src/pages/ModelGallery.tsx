@@ -12,7 +12,7 @@ const ModelGallery = () => {
   const models = [
     {
       id: "lfr-model",
-      title: "LFR Design (GLB)",
+      title: "LFR Design",
       description: "Line Following Robot design rendered with Three.js for smooth interaction.",
       category: "product",
       format: "GLB",
