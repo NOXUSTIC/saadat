@@ -1,3 +1,4 @@
+
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,9 +16,18 @@ const ModelGallery = () => {
       title: "Mars Rover Exploration Vehicle",
       description: "Detailed 3D model of a Mars exploration rover with realistic components and materials.",
       category: "engineering",
-      format: "FBX",
+      format: "GLB",
       imageUrl: "/placeholder.svg",
       icon: <Box className="w-10 h-10 text-[#30A5FF]" />
+    },
+    {
+      id: "line-follower",
+      title: "Line Follower Robot",
+      description: "Autonomous line following robot with sensors and control systems for path navigation.",
+      category: "engineering",
+      format: "GLB",
+      imageUrl: "/placeholder.svg",
+      icon: <Cog className="w-10 h-10 text-[#30A5FF]" />
     }
   ];
 
@@ -28,7 +38,7 @@ const ModelGallery = () => {
         <div className="max-w-3xl mx-auto mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">3D Model Gallery</h1>
           <p className="text-lg text-foreground/80">
-            Explore my collection of 3D models in various formats: GLB, GLTF, OBJ, FBX, STL, and more.
+            Explore my collection of 3D models in GLB and GLTF formats.
           </p>
         </div>
 

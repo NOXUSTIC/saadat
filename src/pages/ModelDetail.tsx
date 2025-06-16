@@ -14,16 +14,16 @@ const ModelDetail = () => {
   // Define different models with their paths and info
   const models = {
     "mars-rover": {
-      path: "/models/LFR.fbx",
+      path: "/models/mars-rover.glb",
       title: "Mars Rover Exploration Vehicle",
       description: "Detailed 3D model of a Mars exploration rover with realistic components, solar panels, and scientific instruments.",
-      format: "FBX"
+      format: "GLB"
     },
-    "lfr-model": {
-      path: "/models/LFR.fbx",
-      title: "LFR Design Model",
-      description: "Line Following Robot design with detailed components and structure.",
-      format: "FBX"
+    "line-follower": {
+      path: "/models/line-follower.glb",
+      title: "Line Follower Robot",
+      description: "Autonomous line following robot with sensors and control systems for precise path navigation and obstacle detection.",
+      format: "GLB"
     }
   };
 
@@ -56,8 +56,8 @@ const ModelDetail = () => {
               Format: <span className="font-mono bg-muted px-2 py-1 rounded">{currentModel.format}</span>
             </p>
             <p className="mb-4">
-              This 3D model viewer supports multiple formats including GLB, GLTF, OBJ, FBX, STL, and more.
-              Each format is handled by the most appropriate rendering engine for optimal performance.
+              This 3D model viewer supports GLB and GLTF formats for optimal performance and quality.
+              Each model is rendered using Three.js for realistic lighting and materials.
             </p>
             <p>
               Use the mouse to interact with the model: rotate, zoom, and pan to explore all angles and details.
