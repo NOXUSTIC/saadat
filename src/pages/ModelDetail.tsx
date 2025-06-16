@@ -14,10 +14,10 @@ const ModelDetail = () => {
   // Define different models with their paths and info
   const models = {
     "lfr-model": {
-      path: "public/models/LFR.fbx",
+      path: "/models/LFR.fbx",
       title: "LFR Design Model",
       description: "Line Following Robot design with detailed components and structure.",
-      format: "GLB"
+      format: "FBX"
     },
     "step-model": {
       path: "/models/LFR/LFR.step",
