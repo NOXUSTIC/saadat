@@ -13,21 +13,21 @@ const ModelDetail = () => {
   
   // Define different models with their paths and info
   const models = {
+    "mars-rover": {
+      path: "/models/LFR.fbx",
+      title: "Mars Rover Exploration Vehicle",
+      description: "Detailed 3D model of a Mars exploration rover with realistic components, solar panels, and scientific instruments.",
+      format: "FBX"
+    },
     "lfr-model": {
       path: "/models/LFR.fbx",
       title: "LFR Design Model",
       description: "Line Following Robot design with detailed components and structure.",
       format: "FBX"
-    },
-    "step-model": {
-      path: "/models/LFR/LFR.step",
-      title: "STEP CAD Model", 
-      description: "Professional CAD model in STEP format using OpenCascade.js.",
-      format: "STEP"
     }
   };
 
-  const currentModel = models[id as keyof typeof models] || models["lfr-model"];
+  const currentModel = models[id as keyof typeof models] || models["mars-rover"];
 
   return (
     <div className="min-h-screen">
@@ -56,7 +56,7 @@ const ModelDetail = () => {
               Format: <span className="font-mono bg-muted px-2 py-1 rounded">{currentModel.format}</span>
             </p>
             <p className="mb-4">
-              This 3D model viewer supports multiple formats including GLB, GLTF, OBJ, FBX, STL, and STEP files.
+              This 3D model viewer supports multiple formats including GLB, GLTF, OBJ, FBX, STL, and more.
               Each format is handled by the most appropriate rendering engine for optimal performance.
             </p>
             <p>
