@@ -14,7 +14,7 @@ const ModelDetail = () => {
   // Model data for line follower robot
   const modelData = {
     title: "Line Follower Robot",
-    path: "/models/line-follower.glb",
+    path: "public/models/line-follower.glb",
     description: "Autonomous line following robot with sensors and precise motor control systems.",
     details: "This line follower robot demonstrates autonomous navigation capabilities with infrared sensors and motor control systems for precise path following. The design includes detailed mechanical components and electronic systems."
   };
