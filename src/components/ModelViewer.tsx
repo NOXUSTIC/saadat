@@ -6,7 +6,7 @@ import { OrbitControls, useGLTF, Stage, PresentationControls } from "@react-thre
 const Model = ({ modelPath }: { modelPath: string }) => {
   try {
     const { scene } = useGLTF(modelPath);
-    return <primitive object={scene} scale={0.5} />;
+    return <primitive object={scene} scale={0.1} />;
   } catch (error) {
     console.error("Failed to load model:", error);
     return null;
