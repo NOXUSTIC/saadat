@@ -1,7 +1,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF, Stage, PresentationControls, Box, Text } from "@react-three/drei";
+import { OrbitControls, useGLTF, Stage, PresentationControls } from "@react-three/drei";
 
 const Model = ({ modelPath }: { modelPath: string }) => {
   try {
@@ -16,27 +16,14 @@ const Model = ({ modelPath }: { modelPath: string }) => {
 const FallbackModel = ({ title }: { title: string }) => {
   return (
     <group>
-      <Box args={[2, 1, 1]} position={[0, 0, 0]}>
+      <mesh position={[0, 0, 0]}>
+        <boxGeometry args={[2, 1, 1]} />
         <meshStandardMaterial color="#30A5FF" />
-      </Box>
-      <Text
-        position={[0, -1.5, 0]}
-        fontSize={0.3}
-        color="#053F5C"
-        anchorX="center"
-        anchorY="middle"
-      >
-        {title}
-      </Text>
-      <Text
-        position={[0, -2, 0]}
-        fontSize={0.2}
-        color="#666"
-        anchorX="center"
-        anchorY="middle"
-      >
-        Model Preview
-      </Text>
+      </mesh>
+      <mesh position={[0, -1.5, 0]}>
+        <planeGeometry args={[4, 0.5]} />
+        <meshBasicMaterial color="transparent" opacity={0} />
+      </mesh>
     </group>
   );
 };
