@@ -11,27 +11,13 @@ import { Link } from "react-router-dom";
 const ModelDetail = () => {
   const { id } = useParams();
   
-  // Model data based on ID
-  const getModelData = (id: string) => {
-    const models = {
-      "mars-rover": {
-        title: "Mars Rover Exploration Vehicle",
-        path: "/models/mars-rover.glb",
-        description: "Advanced Mars exploration vehicle with detailed mechanical components and scientific instruments.",
-        details: "This Mars rover model features realistic mechanical systems, solar panels, and scientific equipment designed for planetary exploration."
-      },
-      "line-follower": {
-        title: "Line Follower Robot",
-        path: "/models/line-follower.glb", 
-        description: "Autonomous line following robot with sensors and precise motor control systems.",
-        details: "This line follower robot demonstrates autonomous navigation capabilities with infrared sensors and motor control systems for precise path following."
-      }
-    };
-    
-    return models[id as keyof typeof models] || models["line-follower"];
+  // Model data for line follower robot
+  const modelData = {
+    title: "Line Follower Robot",
+    path: "/models/line-follower.glb",
+    description: "Autonomous line following robot with sensors and precise motor control systems.",
+    details: "This line follower robot demonstrates autonomous navigation capabilities with infrared sensors and motor control systems for precise path following. The design includes detailed mechanical components and electronic systems."
   };
-
-  const modelData = getModelData(id || "line-follower");
 
   return (
     <div className="min-h-screen">

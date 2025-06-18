@@ -6,64 +6,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Box, Package } from "lucide-react";
+import { Box } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ModelGallery = () => {
   const models = [
     {
-      id: "lfr-model",
-      title: "LFR Design",
-      description: "Line Following Robot design with detailed components and structure.",
+      id: "line-follower",
+      title: "Line Follower Robot",
+      description: "Autonomous line following robot with sensors and precise motor control systems.",
       category: "product",
-      imageUrl: "/placeholder.svg",
-      icon: <Box className="w-10 h-10 text-[#30A5FF]" />
-    },
-    {
-      id: "interior-design",
-      title: "Architectural Interior Design",
-      description: "Modern living room interior with detailed furniture and lighting setup.",
-      category: "architecture",
-      imageUrl: "/placeholder.svg",
-      icon: <Box className="w-10 h-10 text-[#30A5FF]" />
-    },
-    {
-      id: "product-viz",
-      title: "Product Visualization",
-      description: "3D product rendering of a smart device with photorealistic materials.",
-      category: "product",
-      imageUrl: "/placeholder.svg",
-      icon: <Package className="w-10 h-10 text-[#30A5FF]" />
-    },
-    {
-      id: "character-model",
-      title: "Character Model",
-      description: "Stylized character model with rigging and animation setup.",
-      category: "character",
-      imageUrl: "/placeholder.svg",
-      icon: <Box className="w-10 h-10 text-[#30A5FF]" />
-    },
-    {
-      id: "environment-design",
-      title: "Environmental Design",
-      description: "Detailed outdoor environment with terrain and vegetation.",
-      category: "environment",
-      imageUrl: "/placeholder.svg",
-      icon: <Box className="w-10 h-10 text-[#30A5FF]" />
-    },
-    {
-      id: "concept-vehicle",
-      title: "Concept Vehicle",
-      description: "Futuristic vehicle concept with detailed interior and exterior.",
-      category: "product",
-      imageUrl: "/placeholder.svg",
-      icon: <Package className="w-10 h-10 text-[#30A5FF]" />
-    },
-    {
-      id: "game-assets",
-      title: "Game Asset Pack",
-      description: "Collection of low-poly game assets optimized for real-time rendering.",
-      category: "game",
       imageUrl: "/placeholder.svg",
       icon: <Box className="w-10 h-10 text-[#30A5FF]" />
     }
@@ -76,7 +28,7 @@ const ModelGallery = () => {
         <div className="max-w-3xl mx-auto mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">3D Model Gallery</h1>
           <p className="text-lg text-foreground/80">
-            Explore my collection of 3D models and designs created using industry-standard tools.
+            Explore my 3D model of the Line Follower Robot created using industry-standard tools.
           </p>
         </div>
 
@@ -84,11 +36,7 @@ const ModelGallery = () => {
           <div className="flex justify-center mb-8">
             <TabsList>
               <TabsTrigger value="all">All Models</TabsTrigger>
-              <TabsTrigger value="architecture">Architecture</TabsTrigger>
               <TabsTrigger value="product">Product</TabsTrigger>
-              <TabsTrigger value="character">Characters</TabsTrigger>
-              <TabsTrigger value="environment">Environments</TabsTrigger>
-              <TabsTrigger value="game">Game Assets</TabsTrigger>
             </TabsList>
           </div>
           
@@ -100,17 +48,13 @@ const ModelGallery = () => {
             </div>
           </TabsContent>
           
-          {["architecture", "product", "character", "environment", "game"].map((category) => (
-            <TabsContent key={category} value={category} className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {models
-                  .filter((model) => model.category === category)
-                  .map((model, index) => (
-                    <ModelCard key={index} model={model} />
-                  ))}
-              </div>
-            </TabsContent>
-          ))}
+          <TabsContent value="product" className="mt-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {models.map((model, index) => (
+                <ModelCard key={index} model={model} />
+              ))}
+            </div>
+          </TabsContent>
         </Tabs>
 
         <div className="text-center mt-16">
