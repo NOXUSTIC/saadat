@@ -11,9 +11,27 @@ import { Link } from "react-router-dom";
 const ModelDetail = () => {
   const { id } = useParams();
   
-  // For now, we'll just show the LFR.step model
-  // In a real app, you could use the id parameter to choose which model to display
-  const modelPath = "/models/LFR.glb"; // Path to your converted model
+  // Model data based on ID
+  const getModelData = (id: string) => {
+    const models = {
+      "mars-rover": {
+        title: "Mars Rover Exploration Vehicle",
+        path: "/models/mars-rover.glb",
+        description: "Advanced Mars exploration vehicle with detailed mechanical components and scientific instruments.",
+        details: "This Mars rover model features realistic mechanical systems, solar panels, and scientific equipment designed for planetary exploration."
+      },
+      "line-follower": {
+        title: "Line Follower Robot",
+        path: "/models/line-follower.glb", 
+        description: "Autonomous line following robot with sensors and precise motor control systems.",
+        details: "This line follower robot demonstrates autonomous navigation capabilities with infrared sensors and motor control systems for precise path following."
+      }
+    };
+    
+    return models[id as keyof typeof models] || models["line-follower"];
+  };
+
+  const modelData = getModelData(id || "line-follower");
 
   return (
     <div className="min-h-screen">
@@ -29,22 +47,20 @@ const ModelDetail = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6">3D Model Viewer</h1>
+          <h1 className="text-4xl font-bold mb-6">{modelData.title}</h1>
           <p className="mb-8 text-foreground/80">
             Interact with the 3D model below. Click and drag to rotate, scroll to zoom.
           </p>
           
-          <ModelViewer modelPath={modelPath} />
+          <ModelViewer modelPath={modelData.path} title={modelData.title} />
           
           <div className="mt-8 bg-card p-6 rounded-lg border border-border">
             <h2 className="text-2xl font-semibold mb-4">About This Model</h2>
             <p className="mb-4">
-              This is a detailed 3D model created by Saadat S Rahman. The model demonstrates professional 3D design skills
-              and attention to detail.
+              {modelData.description}
             </p>
             <p>
-              Created using industry-standard 3D modeling tools and techniques, this model showcases my ability to create
-              high-quality 3D assets for various applications.
+              {modelData.details}
             </p>
           </div>
         </div>
