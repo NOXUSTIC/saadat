@@ -15,7 +15,7 @@ const ModelGallery = () => {
       title: "Line Follower Robot",
       description: "Autonomous line following robot with sensors and precise motor control systems.",
       category: "product",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/lovable-uploads/a4a443e8-da30-400a-b3fe-770d636d2f42.png",
       icon: <Box className="w-10 h-10 text-[#30A5FF]" />
     },
     {
