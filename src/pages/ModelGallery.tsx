@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -24,7 +23,7 @@ const ModelGallery = () => {
       title: "Nano Battlebot",
       description: "Compact fighting robot designed for competitive robotics with advanced combat mechanisms.",
       category: "product",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/lovable-uploads/e967c162-b356-4e25-8ad9-ec31049c431a.png",
       icon: <Zap className="w-10 h-10 text-[#30A5FF]" />
     }
   ];

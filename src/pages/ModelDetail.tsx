@@ -17,14 +17,14 @@ const ModelDetail = () => {
       case "line-follower":
         return {
           title: "Line Follower Robot",
-          path: "public/models/line-follower.glb",
+          path: "/models/line-follower.glb",
           description: "Autonomous line following robot with sensors and precise motor control systems.",
           details: "This line follower robot demonstrates autonomous navigation capabilities with infrared sensors and motor control systems for precise path following. The design includes detailed mechanical components and electronic systems."
         };
       case "nano-battlebot":
         return {
           title: "Nano Battlebot",
-          path: "public/models/nano-battlebot.glb",
+          path: "/models/nano-battlebot.glb",
           description: "Compact fighting robot designed for competitive robotics with advanced combat mechanisms.",
           details: "This nano battlebot features a robust design optimized for competitive robot fighting. The model includes detailed armor plating, weapon systems, and reinforced chassis designed to withstand intense combat scenarios."
         };
