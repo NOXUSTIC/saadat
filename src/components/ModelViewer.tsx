@@ -78,7 +78,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath, title = "3D Model"
         
         <PresentationControls
           global
-          zoom={-10}
+          zoom={0}
           rotation={[0, -Math.PI / 4, 0]}
           polar={[0, Math.PI / 2]}
           azimuth={[-Math.PI / 2, Math.PI / 2]}
