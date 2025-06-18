@@ -11,13 +11,34 @@ import { Link } from "react-router-dom";
 const ModelDetail = () => {
   const { id } = useParams();
   
-  // Model data for line follower robot
-  const modelData = {
-    title: "Line Follower Robot",
-    path: "public/models/line-follower.glb",
-    description: "Autonomous line following robot with sensors and precise motor control systems.",
-    details: "This line follower robot demonstrates autonomous navigation capabilities with infrared sensors and motor control systems for precise path following. The design includes detailed mechanical components and electronic systems."
+  // Model data
+  const getModelData = (modelId: string) => {
+    switch (modelId) {
+      case "line-follower":
+        return {
+          title: "Line Follower Robot",
+          path: "/models/line-follower.glb",
+          description: "Autonomous line following robot with sensors and precise motor control systems.",
+          details: "This line follower robot demonstrates autonomous navigation capabilities with infrared sensors and motor control systems for precise path following. The design includes detailed mechanical components and electronic systems."
+        };
+      case "nano-battlebot":
+        return {
+          title: "Nano Battlebot",
+          path: "/models/nano-battlebot.glb",
+          description: "Compact fighting robot designed for competitive robotics with advanced combat mechanisms.",
+          details: "This nano battlebot features a robust design optimized for competitive robot fighting. The model includes detailed armor plating, weapon systems, and reinforced chassis designed to withstand intense combat scenarios."
+        };
+      default:
+        return {
+          title: "3D Model",
+          path: "",
+          description: "3D model not found.",
+          details: "The requested model could not be found."
+        };
+    }
   };
+
+  const modelData = getModelData(id || "");
 
   return (
     <div className="min-h-screen">

@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Box } from "lucide-react";
+import { Box, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ModelGallery = () => {
@@ -18,6 +18,14 @@ const ModelGallery = () => {
       category: "product",
       imageUrl: "/placeholder.svg",
       icon: <Box className="w-10 h-10 text-[#30A5FF]" />
+    },
+    {
+      id: "nano-battlebot",
+      title: "Nano Battlebot",
+      description: "Compact fighting robot designed for competitive robotics with advanced combat mechanisms.",
+      category: "product",
+      imageUrl: "/placeholder.svg",
+      icon: <Zap className="w-10 h-10 text-[#30A5FF]" />
     }
   ];
 
@@ -28,7 +36,7 @@ const ModelGallery = () => {
         <div className="max-w-3xl mx-auto mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">3D Model Gallery</h1>
           <p className="text-lg text-foreground/80">
-            Explore my 3D model of the Line Follower Robot created using industry-standard tools.
+            Explore my 3D models of robots created using industry-standard tools.
           </p>
         </div>
 
