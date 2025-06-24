@@ -15,7 +15,7 @@ const PCBGallery = () => {
       title: "Line Follower PCB",
       description: "Custom PCB design for autonomous line following robot with sensor array and motor drivers.",
       category: "robotics",
-      imageUrl: "/uploads/93dee0bb-e255-41eb-bb31-a4ae14e708bd.png",
+      imageUrl: "/lovable-uploads/93dee0bb-e255-41eb-bb31-a4ae14e708bd.png",
       icon: <Cpu className="w-10 h-10 text-[#30A5FF]" />
     },
     {
@@ -23,7 +23,7 @@ const PCBGallery = () => {
       title: "Flight Controller PCB",
       description: "A compact STM32F103C8T6-based flight controller designed for precise multirotor control with integrated sensor and communication interfaces.",
       category: "robotics",
-      imageUrl: "/uploads/e967c162-b356-4e25-8ad9-ec31049c431a.jpg",
+      imageUrl: "/lovable-uploads/e967c162-b356-4e25-8ad9-ec31049c431a.jpg",
       icon: <Zap className="w-10 h-10 text-[#30A5FF]" />
     }
   ];
