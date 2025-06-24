@@ -20,7 +20,7 @@ const PCBDetail = () => {
           description: "Custom PCB design for autonomous line following robot with sensor array and motor drivers.",
           details: "This PCB design features a compact layout optimized for line following robots. It includes dedicated sensor input circuits, motor driver integration, and power management systems. The design incorporates proper ground planes and signal isolation for reliable operation."
         };
-      case "battlebot-control-pcb":
+      case "flight-controller-pcb":
         return {
           title: "Flight Controller PCB",
           imageUrl: "/lovable-uploads/e967c162-b356-4e25-8ad9-ec31049c431a.JPG",
