@@ -78,10 +78,10 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath, title = "3D Model"
         
         <PresentationControls
           global
-          zoom={0}
+          zoom={1.2}
           rotation={[0, -Math.PI / 4, 0]}
-          polar={[0, Math.PI / 2]}
-          azimuth={[-Math.PI / 2, Math.PI / 2]}
+          polar={[-Math.PI, Math.PI]}
+          azimuth={[-Math.PI, Math.PI]}
         >
           {modelExists ? (
             <Model modelPath={modelPath} />
