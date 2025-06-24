@@ -6,7 +6,7 @@ import { OrbitControls, useGLTF, Stage, PresentationControls } from "@react-thre
 const Model = ({ modelPath }: { modelPath: string }) => {
   try {
     const { scene } = useGLTF(modelPath);
-    return <primitive object={scene} scale={0.3} />;
+    return <primitive object={scene} scale={0.2} />;
   } catch (error) {
     console.error("Failed to load model:", error);
     return null;
@@ -94,8 +94,8 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath, title = "3D Model"
           enableZoom={true} 
           enablePan={true} 
           enableRotate={true}
-          minDistance={8}
-          maxDistance={25}
+          minDistance={20}
+          maxDistance={60}
         />
       </Canvas>
     </div>
