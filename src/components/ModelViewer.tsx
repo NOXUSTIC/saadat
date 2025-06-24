@@ -57,7 +57,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath, title = "3D Model"
       <Canvas 
         shadows 
         dpr={[1, 2]} 
-        camera={{ fov: 50, position: [0, 0, 18] }}
+        camera={{ fov: 50, position: [0, 0, 40] }}
         gl={{ antialias: true }}
       >
         <color attach="background" args={["#f8fafc"]} />
