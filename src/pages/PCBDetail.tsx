@@ -23,7 +23,7 @@ const PCBDetail = () => {
       case "battlebot-control-pcb":
         return {
           title: "Flight Controller PCB",
-          imageUrl: "/lovable-uploads/e967c162-b356-4e25-8ad9-ec31049c431a.jpg",
+          imageUrl: "/lovable-uploads/e967c162-b356-4e25-8ad9-ec31049c431a.JPG",
           description: "A compact STM32F103C8T6-based flight controller designed for precise multirotor control with integrated sensor and communication interfaces.",
           details: "This is a custom-designed flight controller built around the STM32F103C8T6 microcontroller, known for its powerful ARM Cortex-M3 core and real-time performance, making it highly suitable for UAV and multirotor applications. The PCB layout features organized motor outputs (MOTOR1 to MOTOR4) for quadcopter control, USART interface for telemetry and communication modules, dedicated ports for GPS and BMP180 barometric sensors, and expansion headers for additional peripherals. The compact, efficient design ensures stable flight control with precise sensor integration, allowing for advanced navigation and telemetry capabilities while maintaining a lightweight form factor ideal for aerial robotics."
         };
