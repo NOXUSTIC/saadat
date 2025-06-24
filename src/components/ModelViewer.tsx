@@ -57,7 +57,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath, title = "3D Model"
       <Canvas 
         shadows 
         dpr={[1, 2]} 
-        camera={{ fov: 50, position: [0, 0, 12] }}
+        camera={{ fov: 50, position: [0, 0, 18] }}
         gl={{ antialias: true }}
       >
         <color attach="background" args={["#f8fafc"]} />
@@ -94,8 +94,8 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath, title = "3D Model"
           enableZoom={true} 
           enablePan={true} 
           enableRotate={true}
-          minDistance={6}
-          maxDistance={20}
+          minDistance={8}
+          maxDistance={25}
         />
       </Canvas>
     </div>

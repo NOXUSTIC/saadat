@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ModelGallery from "./pages/ModelGallery";
 import ModelDetail from "./pages/ModelDetail";
+import PCBGallery from "./pages/PCBGallery";
+import PCBDetail from "./pages/PCBDetail";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +23,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/3d-models" element={<ModelGallery />} />
           <Route path="/3d-models/:id" element={<ModelDetail />} />
+          <Route path="/pcb-designs" element={<PCBGallery />} />
+          <Route path="/pcb-designs/:id" element={<PCBDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

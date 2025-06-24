@@ -41,6 +41,7 @@ const Header = () => {
           <a href="/#skills" className="text-foreground/80 hover:text-foreground transition-colors">Skills</a>
           <a href="/#projects" className="text-foreground/80 hover:text-foreground transition-colors">Projects</a>
           <Link to="/3d-models" className="text-foreground/80 hover:text-foreground transition-colors">3D Models</Link>
+          <Link to="/pcb-designs" className="text-foreground/80 hover:text-foreground transition-colors">PCB Designs</Link>
           <a href="/#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
           <Button className="bg-[#053F5C] hover:bg-[#30A5FF]" asChild>
             <a href="/#contact">Get in Touch</a>
@@ -93,6 +94,13 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               3D Models
+            </Link>
+            <Link
+              to="/pcb-designs"
+              className="text-foreground/80 hover:text-foreground transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              PCB Designs
             </Link>
             <a 
               href="/#contact" 
