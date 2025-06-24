@@ -16,7 +16,7 @@ const PCBDetail = () => {
       case "line-follower-pcb":
         return {
           title: "Line Follower PCB",
-          imageUrl: "/lovable-uploads/a4a443e8-da30-400a-b3fe-770d636d2f42.png",
+          imageUrl: "/lovable-uploads/93dee0bb-e255-41eb-bb31-a4ae14e708bd.png",
           description: "Custom PCB design for autonomous line following robot with sensor array and motor drivers.",
           details: "This PCB design features a compact layout optimized for line following robots. It includes dedicated sensor input circuits, motor driver integration, and power management systems. The design incorporates proper ground planes and signal isolation for reliable operation."
         };

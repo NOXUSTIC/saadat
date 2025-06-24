@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -16,7 +15,7 @@ const PCBGallery = () => {
       title: "Line Follower PCB",
       description: "Custom PCB design for autonomous line following robot with sensor array and motor drivers.",
       category: "robotics",
-      imageUrl: "/lovable-uploads/a4a443e8-da30-400a-b3fe-770d636d2f42.png",
+      imageUrl: "/lovable-uploads/93dee0bb-e255-41eb-bb31-a4ae14e708bd.png",
       icon: <Cpu className="w-10 h-10 text-[#30A5FF]" />
     },
     {
