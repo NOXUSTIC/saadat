@@ -142,6 +142,9 @@ const Hero = () => {
           <Button variant="outline" className="text-lg px-6 py-6 border-[#053F5C] hover:border-[#30A5FF] hover:text-[#30A5FF]" asChild>
             <a href="#contact">Contact Me</a>
           </Button>
+          <Button className="bg-green-600 hover:bg-green-700 text-lg px-6 py-6" asChild>
+            <a href="#" download>Download My CV</a>
+          </Button>
         </div>
         
         <div className="mt-16 sm:mt-20 animate-fade-up" style={{animationDelay: "0.4s"}}>

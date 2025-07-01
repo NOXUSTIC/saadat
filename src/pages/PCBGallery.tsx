@@ -9,22 +9,18 @@ import { Cpu, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const PCBGallery = () => {
-  const pcbs = [
+  const pcbDesigns = [
     {
       id: "line-follower-pcb",
       title: "Line Follower PCB",
-      description: "Custom PCB design for autonomous line following robot with sensor array and motor drivers.",
-      category: "robotics",
-      imageUrl: "/lovable-uploads/93dee0bb-e255-41eb-bb31-a4ae14e708bd.png",
-      icon: <Cpu className="w-10 h-10 text-[#30A5FF]" />
+      imageUrl: "/uploads/93dee0bb-e255-41eb-bb31-a4ae14e708bd.png",
+      description: "Custom PCB design for autonomous line following robot with sensor array and motor drivers."
     },
     {
       id: "flight-controller-pcb",
       title: "Flight Controller PCB",
-      description: "A compact STM32F103C8T6-based flight controller designed for precise multirotor control with integrated sensor and communication interfaces.",
-      category: "robotics",
-      imageUrl: "/lovable-uploads/e967c162-b356-4e25-8ad9-ec31049c431a.JPG",
-      icon: <Zap className="w-10 h-10 text-[#30A5FF]" />
+      imageUrl: "/uploads/e967c162-b356-4e25-8ad9-ec31049c431a.JPG",
+      description: "A compact STM32F103C8T6-based flight controller designed for precise multirotor control."
     }
   ];
 
@@ -49,7 +45,7 @@ const PCBGallery = () => {
           
           <TabsContent value="all" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {pcbs.map((pcb, index) => (
+              {pcbDesigns.map((pcb, index) => (
                 <PCBCard key={index} pcb={pcb} />
               ))}
             </div>
@@ -57,7 +53,7 @@ const PCBGallery = () => {
           
           <TabsContent value="robotics" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {pcbs.map((pcb, index) => (
+              {pcbDesigns.map((pcb, index) => (
                 <PCBCard key={index} pcb={pcb} />
               ))}
             </div>
@@ -80,9 +76,7 @@ interface PCBCardProps {
     id: string;
     title: string;
     description: string;
-    category: string;
     imageUrl: string;
-    icon: React.ReactNode;
   };
 }
 
@@ -98,7 +92,7 @@ const PCBCard = ({ pcb }: PCBCardProps) => {
       </div>
       <CardHeader>
         <div className="flex items-center gap-3">
-          {pcb.icon}
+          <Cpu className="w-10 h-10 text-[#30A5FF]" />
           <CardTitle>{pcb.title}</CardTitle>
         </div>
       </CardHeader>
@@ -107,7 +101,7 @@ const PCBCard = ({ pcb }: PCBCardProps) => {
       </CardContent>
       <CardFooter className="flex justify-between">
         <Badge variant="outline" className="bg-ocean/10 text-ocean-light">
-          {pcb.category}
+          Robotics
         </Badge>
         <Button size="sm" className="bg-[#053F5C] hover:bg-[#30A5FF]" asChild>
           <Link to={`/pcb-designs/${pcb.id}`}>
