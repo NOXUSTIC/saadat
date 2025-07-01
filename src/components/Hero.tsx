@@ -142,7 +142,7 @@ const Hero = () => {
           <Button variant="outline" className="text-lg px-6 py-6 border-[#053F5C] hover:border-[#30A5FF] hover:text-[#30A5FF]" asChild>
             <a href="#contact">Contact Me</a>
           </Button>
-          <Button className="bg-green-600 hover:bg-green-700 text-lg px-6 py-6" asChild>
+          <Button variant="outline" className="text-lg px-6 py-6 border-[#053F5C] hover:border-[#30A5FF] hover:text-[#30A5FF]" asChild>
             <a href="/cv/Saadat_S_Rahman_CV.pdf" download="Saadat_S_Rahman_CV.pdf">Download My CV</a>
           </Button>
         </div>
