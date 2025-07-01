@@ -18,7 +18,7 @@ const Contact = () => {
 
   // Initialize EmailJS once when component mounts
   useEffect(() => {
-    emailjs.init("Saadat"); // You need to replace with your own User ID from EmailJS
+    emailjs.init("RhapIxP2YN4MX8EFt"); // You need to replace with your own User ID from EmailJS
     setEmailJSInitialized(true);
   }, []);
 
