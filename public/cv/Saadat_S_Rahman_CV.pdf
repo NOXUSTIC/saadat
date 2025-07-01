@@ -1,0 +1,164 @@
+
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 2000
+>>
+stream
+BT
+/F1 18 Tf
+50 750 Td
+(SAADAT S. RAHMAN) Tj
+0 -30 Td
+/F2 12 Tf
+(Fullstack & Embedded Systems Engineer) Tj
+0 -20 Td
+(Email: saadat20022002@gmail.com) Tj
+0 -15 Td
+(GitHub: github.com/NOXUSTIC) Tj
+0 -15 Td
+(LinkedIn: bd.linkedin.com/in/saadat-s-rahman-7634a1277) Tj
+
+0 -40 Td
+/F1 14 Tf
+(PROFESSIONAL SUMMARY) Tj
+0 -20 Td
+/F2 11 Tf
+(Innovative Fullstack and Embedded Systems Engineer with expertise in) Tj
+0 -15 Td
+(web development, robotics, and PCB design. Passionate about creating) Tj
+0 -15 Td
+(cutting-edge solutions at the intersection of software and hardware.) Tj
+
+0 -30 Td
+/F1 14 Tf
+(TECHNICAL SKILLS) Tj
+0 -20 Td
+/F2 11 Tf
+(• Web Technologies: React, TypeScript, Node.js, HTML5, CSS3) Tj
+0 -15 Td
+(• Programming Languages: JavaScript, Python, C++, C) Tj
+0 -15 Td
+(• Embedded Systems: Arduino, STM32, Microcontroller Programming) Tj
+0 -15 Td
+(• PCB Design: Circuit Design, Layout, Prototyping) Tj
+0 -15 Td
+(• Robotics: Autonomous Systems, Sensor Integration, Motor Control) Tj
+0 -15 Td
+(• 3D Modeling: CAD Design, Prototyping) Tj
+0 -15 Td
+(• Database: SQL, NoSQL) Tj
+0 -15 Td
+(• Version Control: Git, GitHub) Tj
+
+0 -30 Td
+/F1 14 Tf
+(KEY PROJECTS) Tj
+0 -20 Td
+/F2 11 Tf
+(Line Follower Robot) Tj
+0 -12 Td
+(• Designed custom PCB with sensor array and motor drivers) Tj
+0 -12 Td
+(• Implemented autonomous navigation algorithms) Tj
+0 -12 Td
+(• Integrated multiple sensors for precise line detection) Tj
+
+0 -18 Td
+(Flight Controller System) Tj
+0 -12 Td
+(• Developed STM32F103C8T6-based flight controller) Tj
+0 -12 Td
+(• Implemented real-time control systems for multirotor aircraft) Tj
+0 -12 Td
+(• Integrated GPS, barometric sensors, and telemetry systems) Tj
+
+0 -30 Td
+/F1 14 Tf
+(EDUCATION & CERTIFICATIONS) Tj
+0 -20 Td
+/F2 11 Tf
+(Bachelor's Degree in Engineering) Tj
+0 -15 Td
+(Specialized in Electronics and Computer Engineering) Tj
+
+0 -30 Td
+/F1 14 Tf
+(INTERESTS) Tj
+0 -20 Td
+/F2 11 Tf
+(• Robotics and Automation) Tj
+0 -15 Td
+(• IoT and Smart Systems) Tj
+0 -15 Td
+(• Open Source Contributions) Tj
+0 -15 Td
+(• Technology Innovation) Tj
+
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000002326 00000 n 
+0000002404 00000 n 
+trailer
+<<
+/Size 7
+/Root 1 0 R
+>>
+startxref
+2477
+%%EOF

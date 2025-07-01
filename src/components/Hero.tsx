@@ -143,7 +143,7 @@ const Hero = () => {
             <a href="#contact">Contact Me</a>
           </Button>
           <Button className="bg-green-600 hover:bg-green-700 text-lg px-6 py-6" asChild>
-            <a href="#" download>Download My CV</a>
+            <a href="/cv/Saadat_S_Rahman_CV.pdf" download="Saadat_S_Rahman_CV.pdf">Download My CV</a>
           </Button>
         </div>
         
