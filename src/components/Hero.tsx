@@ -47,7 +47,7 @@ const Hero = () => {
       if (!(window as YouTubeWindow).YT) return;
       
       playerRef.current = new (window as YouTubeWindow).YT.Player('youtube-background', {
-        videoId: '6OyEpEnifMo',
+        videoId: 'jSi2LDkyKmI',
         playerVars: {
           autoplay: 1,
           mute: 1,
@@ -56,9 +56,9 @@ const Hero = () => {
           rel: 0,
           iv_load_policy: 3,
           modestbranding: 1,
-          start: 0,
+          start: 29,
           loop: 1,
-          playlist: '6OyEpEnifMo'
+          playlist: 'jSi2LDkyKmI'
         },
         events: {
           'onReady': onPlayerReady,
