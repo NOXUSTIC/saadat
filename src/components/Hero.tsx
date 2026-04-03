@@ -74,18 +74,11 @@ const Hero = () => {
     
     // Monitor player state changes
     const onPlayerStateChange = (event: any) => {
-      // When video ends or is at the specified end time
       if (event.data === (window as YouTubeWindow).YT?.PlayerState.PLAYING) {
-        const checkTime = setInterval(() => {
-          if (playerRef.current && playerRef.current.getCurrentTime) {
-            const currentTime = playerRef.current.getCurrentTime();
-            if (currentTime >= 81) { // 1:21 (81 seconds)
-              playerRef.current.seekTo(0);
-            }
-          }
-        }, 1000);
-        
-        return () => clearInterval(checkTime);
+        // Ensure video always starts from 29 seconds on loop
+        if (playerRef.current && playerRef.current.getCurrentTime() < 29) {
+          playerRef.current.seekTo(29);
+        }
       }
     };
     
