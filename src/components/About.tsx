@@ -17,15 +17,15 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
         <div className="space-y-6" style={{fontFamily: "'JetBrains Mono', monospace"}}>
           <div className="text-lg min-h-16">
-            <Typewriter text={paragraph1} delay={20} startDelay={300} className="text-lg" />
+            <Typewriter text={paragraph1} delay={35} startDelay={300} className="text-lg" />
           </div>
           
           <div className="text-lg min-h-16">
-            <Typewriter text={paragraph2} delay={20} startDelay={3500} className="text-lg" />
+            <Typewriter text={paragraph2} delay={35} startDelay={5000} className="text-lg" />
           </div>
           
           <div className="text-lg min-h-16">
-            <Typewriter text={paragraph3} delay={20} startDelay={7500} className="text-lg" />
+            <Typewriter text={paragraph3} delay={35} startDelay={10000} className="text-lg" />
           </div>
         </div>
         
