@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 interface TypewriterProps {
@@ -19,12 +18,13 @@ const Typewriter: React.FC<TypewriterProps> = ({
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [started, setStarted] = useState(false);
+  const [showEllipsis, setShowEllipsis] = useState(true);
 
   useEffect(() => {
-    // Initial delay before starting the animation
     const startTimer = setTimeout(() => {
+      setShowEllipsis(false);
       setStarted(true);
-    }, startDelay);
+    }, startDelay + 800);
 
     return () => clearTimeout(startTimer);
   }, [startDelay]);
@@ -33,10 +33,20 @@ const Typewriter: React.FC<TypewriterProps> = ({
     if (!started) return;
 
     if (currentIndex < text.length) {
+      const char = text[currentIndex];
+      let charDelay = delay;
+      if (char === '.' || char === ',' || char === '!' || char === '?') {
+        charDelay = delay * 4;
+      } else if (char === ' ') {
+        charDelay = delay * 1.5;
+      } else {
+        charDelay = delay + Math.random() * 20;
+      }
+
       const timeout = setTimeout(() => {
         setDisplayText(prev => prev + text[currentIndex]);
         setCurrentIndex(prevIndex => prevIndex + 1);
-      }, delay);
+      }, charDelay);
       
       return () => clearTimeout(timeout);
     }
@@ -44,8 +54,11 @@ const Typewriter: React.FC<TypewriterProps> = ({
 
   return (
     <span className={className}>
+      {showEllipsis && !started && (
+        <span className="inline-block text-muted-foreground animate-pulse">...</span>
+      )}
       {displayText}
-      {cursor && currentIndex < text.length && (
+      {cursor && started && currentIndex < text.length && (
         <span className="inline-block w-1 h-5 bg-[#30A5FF] ml-1 animate-pulse"></span>
       )}
     </span>
