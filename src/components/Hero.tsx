@@ -123,7 +123,7 @@ const Hero = () => {
         <div className="max-w-2xl text-xl text-foreground/90 mb-8 md:mb-10 animate-fade-up font-mono" style={{animationDelay: "0.2s", fontFamily: "'JetBrains Mono', monospace"}}>
           <Typewriter 
             text="Creating innovative solutions at the intersection of software, hardware, and design. Building impactful experiences with modern web technologies and embedded systems."
-            delay={30}
+            delay={45}
           />
         </div>
         
