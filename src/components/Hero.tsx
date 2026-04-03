@@ -120,7 +120,7 @@ const Hero = () => {
           Hi, I'm <span className="text-[#30A5FF]">Saadat S. Rahman</span>
         </h1>
         
-        <div className="max-w-2xl text-xl text-foreground/90 mb-8 md:mb-10 animate-fade-up" style={{animationDelay: "0.2s"}}>
+        <div className="max-w-2xl text-xl text-foreground/90 mb-8 md:mb-10 animate-fade-up font-mono" style={{animationDelay: "0.2s", fontFamily: "'JetBrains Mono', monospace"}}>
           <Typewriter 
             text="Creating innovative solutions at the intersection of software, hardware, and design. Building impactful experiences with modern web technologies and embedded systems."
             delay={30}

@@ -15,7 +15,7 @@ const About = () => {
       <h2 className="section-title animate-fade-in">About Me</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
-        <div className="space-y-6">
+        <div className="space-y-6" style={{fontFamily: "'JetBrains Mono', monospace"}}>
           <div className="text-lg min-h-16">
             <Typewriter text={paragraph1} delay={20} startDelay={300} className="text-lg" />
           </div>
