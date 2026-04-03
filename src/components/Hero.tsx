@@ -47,7 +47,7 @@ const Hero = () => {
       if (!(window as YouTubeWindow).YT) return;
       
       playerRef.current = new (window as YouTubeWindow).YT.Player('youtube-background', {
-        videoId: '6OyEpEnifMo',
+        videoId: 'jSi2LDkyKmI',
         playerVars: {
           autoplay: 1,
           mute: 1,
@@ -56,9 +56,9 @@ const Hero = () => {
           rel: 0,
           iv_load_policy: 3,
           modestbranding: 1,
-          start: 0,
+          start: 29,
           loop: 1,
-          playlist: '6OyEpEnifMo'
+          playlist: 'jSi2LDkyKmI'
         },
         events: {
           'onReady': onPlayerReady,
@@ -74,18 +74,11 @@ const Hero = () => {
     
     // Monitor player state changes
     const onPlayerStateChange = (event: any) => {
-      // When video ends or is at the specified end time
       if (event.data === (window as YouTubeWindow).YT?.PlayerState.PLAYING) {
-        const checkTime = setInterval(() => {
-          if (playerRef.current && playerRef.current.getCurrentTime) {
-            const currentTime = playerRef.current.getCurrentTime();
-            if (currentTime >= 81) { // 1:21 (81 seconds)
-              playerRef.current.seekTo(0);
-            }
-          }
-        }, 1000);
-        
-        return () => clearInterval(checkTime);
+        // Ensure video always starts from 29 seconds on loop
+        if (playerRef.current && playerRef.current.getCurrentTime() < 29) {
+          playerRef.current.seekTo(29);
+        }
       }
     };
     
